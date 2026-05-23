@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diagnóstico Empresarial — Negrão</title>
+<title>Diagnóstico do Delivery — Empório dos Animais — Negrão Consultoria</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20168,19 +20168,6 @@ break;case"<bookViews":;case"<bookViews>":;case"</bookViews>":break;case"<workbo
   --sombra: 0 4px 20px rgba(31, 58, 46, 0.06);
   --sombra-forte: 0 8px 32px rgba(31, 58, 46, 0.12);
   --transicao: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* === Aliases para retrocompatibilidade com JS (não remover) === */
-  --marrom: var(--verde-escuro);
-  --marrom-escuro: var(--verde-escuro);
-  --marrom-claro: var(--grafite-claro);
-  --coral: var(--dourado);
-  --coral-claro: var(--verde-medio);
-  --coral-suave: var(--dourado-suave);
-  --amarelo: var(--dourado);
-  --amarelo-suave: var(--dourado-suave);
-  --creme: var(--off-white);
-  --creme-claro: var(--off-white-claro);
-  --creme-mais-claro: var(--off-white-suave);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -20209,7 +20196,7 @@ h1, h2, h3, h4 {
 .topo {
   background: var(--verde-escuro);
   border-bottom: 2px solid var(--dourado);
-  padding: 1rem 1.5rem;
+  padding: 0.9rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20218,10 +20205,11 @@ h1, h2, h3, h4 {
   z-index: 100;
   box-shadow: var(--sombra);
 }
-.topo-logo { display: flex; align-items: center; gap: 1rem; }
-.topo-logo .logo-marca {
-  width: 52px;
-  height: 52px;
+.topo-marca-bloco { display: flex; align-items: center; gap: 1.5rem; }
+.topo-logo-rn { display: flex; align-items: center; gap: 0.85rem; }
+.topo-logo-rn .logo-marca {
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
 }
 .topo-titulo {
@@ -20230,7 +20218,7 @@ h1, h2, h3, h4 {
   color: var(--off-white);
 }
 .topo-titulo .pequeno {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   color: var(--verde-claro);
@@ -20238,13 +20226,45 @@ h1, h2, h3, h4 {
 }
 .topo-titulo .principal {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: var(--off-white);
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
+}
+.topo-cliente {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding-left: 1.5rem;
+  border-left: 1px solid rgba(168, 181, 160, 0.3);
+}
+.topo-cliente .selo {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  color: var(--dourado);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+.topo-cliente .nome-cliente {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1rem;
+  color: var(--off-white);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+.topo-cliente-logo {
+  height: 44px;
+  width: auto;
+  border-radius: 4px;
+  background: var(--off-white);
+  padding: 3px 6px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 .salvo-indicador {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--verde-claro);
   display: flex;
   align-items: center;
@@ -20262,10 +20282,10 @@ h1, h2, h3, h4 {
 /* === BARRA DE PROGRESSO === */
 .progresso-wrap {
   background: var(--branco);
-  padding: 1rem 1.5rem;
+  padding: 0.9rem 1.5rem;
   border-bottom: 1px solid var(--borda);
   position: sticky;
-  top: 84px;
+  top: 82px;
   z-index: 90;
   box-shadow: 0 2px 8px rgba(31, 58, 46, 0.03);
 }
@@ -20273,14 +20293,14 @@ h1, h2, h3, h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.6rem;
-  font-size: 0.85rem;
+  margin-bottom: 0.55rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--verde-escuro);
   letter-spacing: 0.3px;
 }
 .progresso-bar {
-  height: 6px;
+  height: 5px;
   background: var(--off-white);
   border-radius: 999px;
   overflow: hidden;
@@ -20292,7 +20312,6 @@ h1, h2, h3, h4 {
   border-radius: 999px;
   transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   width: 0%;
-  position: relative;
 }
 
 /* === CONTAINER PRINCIPAL === */
@@ -20373,6 +20392,15 @@ h1, h2, h3, h4 {
   font-style: italic;
   margin-bottom: 0.7rem;
   font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Destaque para menção ao nome do cliente nos enunciados */
+.cliente-mencao {
+  color: var(--verde-escuro);
+  font-weight: 700;
+  font-style: italic;
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: 0.2px;
 }
 
 /* === INPUTS === */
@@ -20471,16 +20499,6 @@ textarea {
   color: var(--texto);
 }
 
-/* === CAMPO DE TEXTO DENTRO DE OPÇÃO === */
-.opcao .extra {
-  margin-top: 0.5rem;
-  width: 100%;
-}
-.opcao .extra input {
-  background: var(--branco);
-  border-color: var(--verde-medio);
-}
-
 /* === TABELAS DE DADOS NUMÉRICOS === */
 .tabela-container {
   overflow-x: auto;
@@ -20559,7 +20577,7 @@ table.dados input[type="text"] {
   font-weight: 400;
 }
 
-/* === CUSTOS - layout especial === */
+/* === CUSTOS === */
 .custos-grid {
   display: grid;
   gap: 0.6rem;
@@ -20663,11 +20681,60 @@ table.dados input[type="text"] {
   text-align: center;
   padding: 2rem 0;
 }
+.boas-vindas .duo-marcas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 2.2rem;
+  flex-wrap: wrap;
+}
+.boas-vindas .duo-marcas .separador {
+  width: 1px;
+  height: 80px;
+  background: var(--borda);
+}
 .boas-vindas .logo-grande {
-  margin: 0 auto 2rem;
   display: block;
-  width: 140px;
-  height: 140px;
+  width: 130px;
+  height: 130px;
+}
+.boas-vindas .logo-cliente-grande {
+  display: block;
+  max-width: 220px;
+  max-height: 130px;
+  height: auto;
+}
+.boas-vindas .selo-personalizado {
+  display: inline-block;
+  background: var(--dourado-suave);
+  border: 1px solid var(--dourado);
+  padding: 0.45rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--verde-escuro);
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+.boas-vindas .marca-assinatura {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dourado);
+  font-weight: 600;
+}
+.boas-vindas .marca-assinatura::before,
+.boas-vindas .marca-assinatura::after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--dourado);
 }
 .boas-vindas h1 {
   font-size: 2.6rem;
@@ -20681,27 +20748,15 @@ table.dados input[type="text"] {
   margin-bottom: 1rem;
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
-  max-width: 560px;
+  max-width: 580px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.55;
 }
-.boas-vindas .marca-assinatura {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin-bottom: 2.5rem;
-  font-size: 0.75rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--dourado);
+.boas-vindas .subtitulo strong {
+  color: var(--verde-escuro);
+  font-style: normal;
   font-weight: 600;
-}
-.boas-vindas .marca-assinatura::before,
-.boas-vindas .marca-assinatura::after {
-  content: '';
-  width: 30px;
-  height: 1px;
-  background: var(--dourado);
 }
 .boas-vindas .info-box {
   background: var(--off-white);
@@ -20712,7 +20767,7 @@ table.dados input[type="text"] {
   margin: 2rem 0;
 }
 .boas-vindas .info-box h3 {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   margin-bottom: 0.8rem;
   color: var(--verde-escuro);
 }
@@ -20727,7 +20782,7 @@ table.dados input[type="text"] {
   padding: 0.45rem 0 0.45rem 1.6rem;
   position: relative;
   color: var(--texto);
-  font-size: 0.95rem;
+  font-size: 0.94rem;
 }
 .boas-vindas ul li::before {
   content: '';
@@ -20753,7 +20808,7 @@ table.dados input[type="text"] {
   font-size: 0.9rem;
 }
 
-/* === REVISÃO FINAL === */
+/* === REVISÃO E SUCESSO === */
 .revisao-card {
   background: var(--off-white);
   padding: 1.5rem;
@@ -20761,24 +20816,6 @@ table.dados input[type="text"] {
   margin-bottom: 1rem;
   border-left: 3px solid var(--verde-escuro);
 }
-.revisao-card h4 {
-  color: var(--verde-escuro);
-  font-family: 'Playfair Display', Georgia, serif;
-  margin-bottom: 0.5rem;
-  font-size: 1.05rem;
-}
-.revisao-card .conteudo {
-  color: var(--texto);
-  font-size: 0.92rem;
-  white-space: pre-wrap;
-  line-height: 1.6;
-}
-.revisao-card .vazio {
-  color: var(--grafite-claro);
-  font-style: italic;
-}
-
-/* === TELA DE SUCESSO === */
 .sucesso {
   text-align: center;
   padding: 3rem 1rem;
@@ -20804,7 +20841,7 @@ table.dados input[type="text"] {
   margin-bottom: 1rem;
 }
 .sucesso p {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   color: var(--grafite-claro);
   margin-bottom: 2rem;
   max-width: 560px;
@@ -20821,7 +20858,7 @@ table.dados input[type="text"] {
   margin: 0 auto;
 }
 
-/* === AVISO DE VALIDAÇÃO === */
+/* === AVISO === */
 .aviso {
   background: var(--dourado-suave);
   border-left: 3px solid var(--dourado);
@@ -20834,6 +20871,45 @@ table.dados input[type="text"] {
 }
 .aviso.mostrar { display: block; }
 
+/* === BLOCO PERSONALIZADO PARA O CLIENTE === */
+.bloco-personalizado {
+  background: linear-gradient(135deg, var(--off-white) 0%, var(--dourado-suave) 100%);
+  border: 1px solid var(--dourado);
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.bloco-personalizado::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--dourado);
+}
+.bloco-personalizado .selo-pequeno {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dourado);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.bloco-personalizado p {
+  color: var(--verde-escuro);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0;
+}
+.bloco-personalizado p strong {
+  font-weight: 700;
+}
+
 /* === RODAPÉ DA MARCA === */
 .rodape-marca {
   max-width: 920px;
@@ -20842,8 +20918,16 @@ table.dados input[type="text"] {
   text-align: center;
   border-top: 1px solid var(--borda);
   color: var(--grafite-claro);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   letter-spacing: 1px;
+}
+.rodape-marca .linha-rodape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
 }
 .rodape-marca strong {
   color: var(--verde-escuro);
@@ -20856,22 +20940,36 @@ table.dados input[type="text"] {
   width: 30px;
   height: 1px;
   background: var(--dourado);
-  vertical-align: middle;
-  margin: 0 0.75rem;
+}
+.rodape-marca .preparado-para {
+  font-size: 0.72rem;
+  color: var(--dourado);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-top: 0.3rem;
 }
 
 /* === RESPONSIVE === */
-@media (max-width: 640px) {
-  .topo { flex-wrap: wrap; padding: 0.8rem 1rem; }
-  .topo-logo .logo-marca { width: 42px; height: 42px; }
+@media (max-width: 768px) {
+  .topo { flex-wrap: wrap; padding: 0.8rem 1rem; gap: 0.8rem; }
+  .topo-marca-bloco { gap: 1rem; flex-wrap: wrap; }
+  .topo-cliente { padding-left: 1rem; }
+  .topo-logo-rn .logo-marca { width: 40px; height: 40px; }
   .topo-titulo .principal { font-size: 1.05rem; }
-  .topo-titulo .pequeno { font-size: 0.65rem; letter-spacing: 2px; }
-  .progresso-wrap { top: 76px; padding: 0.8rem 1rem; }
+  .topo-titulo .pequeno { font-size: 0.62rem; letter-spacing: 1.8px; }
+  .topo-cliente-logo { max-height: 32px; }
+  .progresso-wrap { top: auto; padding: 0.8rem 1rem; }
+}
+@media (max-width: 640px) {
   .container { padding: 1rem; }
   .etapa-card { padding: 1.5rem; }
   .etapa h2 { font-size: 1.5rem; }
   .boas-vindas h1 { font-size: 1.85rem; }
-  .boas-vindas .logo-grande { width: 100px; height: 100px; }
+  .boas-vindas .duo-marcas { gap: 1.5rem; }
+  .boas-vindas .duo-marcas .separador { display: none; }
+  .boas-vindas .logo-grande { width: 90px; height: 90px; }
+  .boas-vindas .logo-cliente-grande { max-width: 160px; max-height: 90px; }
   .navegacao { flex-direction: column-reverse; }
   .btn { width: 100%; justify-content: center; }
 }
@@ -20886,19 +20984,26 @@ table.dados input[type="text"] {
 </head>
 <body>
 
-
-
-<!-- HEADER -->
+<!-- HEADER com duas marcas: consultor (Negrão) + cliente (Empório dos Animais) -->
 <header class="topo">
-  <div class="topo-logo">
-    <svg class="logo-marca" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="Negrão Consultoria">
+  <div class="topo-marca-bloco">
+    <div class="topo-logo-rn">
+      <svg class="logo-marca" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="Negrão Consultoria">
         <rect x="2" y="2" width="116" height="116" rx="8" fill="none" stroke="#A8B5A0" stroke-width="2"/>
         <text x="60" y="78" text-anchor="middle" font-family="Georgia, serif" font-size="58" font-weight="500" fill="#F4F1EA" letter-spacing="-2">RN</text>
         <line x1="30" y1="92" x2="90" y2="92" stroke="#B8935A" stroke-width="1.5"/>
       </svg>
-    <div class="topo-titulo">
-      <span class="pequeno">Diagnóstico Empresarial</span>
-      <span class="principal">NEGRÃO</span>
+      <div class="topo-titulo">
+        <span class="pequeno">Diagnóstico Empresarial</span>
+        <span class="principal">NEGRÃO</span>
+      </div>
+    </div>
+    <div class="topo-cliente">
+      <img src="data:image/jpeg;base64,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" alt="Empório dos Animais" class="topo-cliente-logo">
+      <div>
+        <span class="selo">Preparado para</span>
+        <span class="nome-cliente">Empório dos Animais</span>
+      </div>
     </div>
   </div>
   <div class="salvo-indicador" id="indicadorSalvo">Salvo automaticamente</div>
@@ -20920,27 +21025,33 @@ table.dados input[type="text"] {
 <!-- ============ ETAPA 0: BOAS-VINDAS ============ -->
 <div class="etapa ativa" data-etapa="0">
   <div class="etapa-card boas-vindas">
-    <svg class="logo-grande" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" aria-label="Negrão Consultoria">
-      <rect x="0" y="0" width="140" height="140" rx="10" fill="#1F3A2E"/>
-      <rect x="20" y="20" width="100" height="100" rx="6" fill="none" stroke="#A8B5A0" stroke-width="1.5"/>
-      <text x="70" y="88" text-anchor="middle" font-family="Georgia, serif" font-size="56" font-weight="500" fill="#F4F1EA" letter-spacing="-2">RN</text>
-      <line x1="42" y1="101" x2="98" y2="101" stroke="#B8935A" stroke-width="1.5"/>
-    </svg>
 
+    <div class="duo-marcas">
+      <svg class="logo-grande" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" aria-label="Negrão Consultoria">
+        <rect x="0" y="0" width="140" height="140" rx="10" fill="#1F3A2E"/>
+        <rect x="20" y="20" width="100" height="100" rx="6" fill="none" stroke="#A8B5A0" stroke-width="1.5"/>
+        <text x="70" y="88" text-anchor="middle" font-family="Georgia, serif" font-size="56" font-weight="500" fill="#F4F1EA" letter-spacing="-2">RN</text>
+        <line x1="42" y1="101" x2="98" y2="101" stroke="#B8935A" stroke-width="1.5"/>
+      </svg>
+      <div class="separador"></div>
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACHARMDASIAAhEBAxEB/8QAHAABAAMAAwEBAAAAAAAAAAAAAAQGBwMFCAEC/8QAQRAAAQMDAgMFBQYDCAEFAQAAAQIDBAAFEQYSByExExUiQVEyUmGR0QgUI0JxgWJyghYkM1aVobHSwTRDU3SDo//EABsBAQACAwEBAAAAAAAAAAAAAAADBAIFBgEH/8QANxEAAQMCBAIHBwMFAQEAAAAAAQACAwQRBRIhMRVBE1FSU2FxgQYUIpGhsfDB0dIjMlSi4TOS/9oADAMBAAIRAxEAPwD0d3i/7rfyP1p3i/7rfyP1qHStrwTD+6C0vEantlTO8X/db+R+tO8X/db+R+tQ6U4Jh/dBOI1PbKmd4v8Aut/I/WneL/ut/I/WodKcEw/ugnEantlTO8X/AHW/kfrTvF/3W/kfrUOlOCYf3QTiNT2ypneL/ut/I/WneL/ut/I/WodKcEw/ugnEantlTO8X/db+R+tO8X/db+R+tQ6U4Jh/dBOI1PbKmd4v+638j9ad4v8Aut/I/WodKcEw/ugnEantlTO8X/db+R+tO8X/AHW/kfrUOlOCYf3QTiNT2ypneL/ut/I/WneL/ut/I/WodKcEw/ugnEantlTO8X/db+R+tO8X/db+R+tQ6U4Jh/dBOI1PbKmd4v8Aut/I/WneL/ut/I/WodKcEw/ugnEantlTO8X/AHW/kfrTvF/3W/kfrUOlOCYf3QTiNT2ypneL/ut/I/WneL/ut/I/WodKcEw/ugnEantlTO8X/db+R+tO8X/db+R+tQ6U4Jh/dBOI1PbKmd4v+638j9ad4v8Aut/I/WodKcEw/ugnEantlTO8X/db+R+tO8X/AHW/kfrUOlOCYf3QTiNT2ypneL/ut/I/WneL/ut/I/WodKcEw/ugnEantlTO8X/db+R+tKh0pwTD+6CcRqe2UpSlbVU0pSlESlKURKUrqdVXNy2WzMYIVNkLDEVK/Z3kE7lfwpAUtX8KTWLnBouV61pcQAjWoLe5f12ZJcDyeQdKfwluAblNBXmsJIUU+h+Bx21efVa/ioundO1a9PNqAblpR/eUvhW774D1KislRHmDjHUHZ9I3tN4gEOLZVLZCQ6WjlDgIyl1HqhY5j0II6g1SpK5lQS0HUfn4ea2Ndhk1I1rntIBF9err/wCcl3dKUq+talKUoiUpSiJSlKIlKUoiUpSiJSlKIlKUoiUpSiJSlKIlKUoiUpSiJSlKIlKUoiUpSiJSlKIlYVxm1WZNxfgw3fyrioUk+y2Dh5X6rUns/wCVCvJdaZxR1KjTGk35YdLcp49hGIAJC1A+IA8jtGTg8iQB51k+h+F2oNY2xzUkh1q3WxXhZUvxuO7fAltpJIzggIG5QycczzrQ4zVua3oY9yuq9mMPill95qTaNvXzPV6/a6zoAAY8qsGjNWztL3BiS0C9HaJHZ56IUcrR/KcA/BQBH5grc432crJ3aEyNQ3EzSkZcQ2gNA/ykZI/qrOdY8G7/AGOxyLzCks3OLEKhMbQkpeY2+0op55SOuQc7SDgDOOZjjqKZwkavo1TW4Vi8Zp3u8BcW18FtljucO82mNdLe6HY0hG9Cv+QfQg5BHqKm1gHAS/3CBqTuBtpci3zAp1ac/wDplJHNz0APIH+n9DutsuNvuccyLbOjTWQraXGHUuJB9Mg9a7ahrG1UQfsV8ixfDJMNqnQP1tz8DspVKUq8tYlKUoiUpSiJSlKIlKUoiUpSiJSlKIlKUoiUpSiJSlKIlKUoiUpSiJSlKIlKUoiVxyHmo7Dj77qGmm0lS1rUEpSkcyST0FdTq3Uts01b/vM90l1eRHjo5uvqH5Uj5c+gzzqgaG05eOJd8uatSXZ+Oz2BeagtuksIUFANpUnOCBn9/wB6ryzZNGi9t+oef7bqxDT5xdxsOXWfJVHjpfEX2/29UKUzJtLTB7BxpwKSp0nx5x0UBt5HnjB86vn2dtfNvt2/QV4SwG23y5CecVyUQStLePeC8KSfhjrjNLn6MVebqq1t254XRKy3tZT4wpPIgjocY8+mKo97tVy0/dFwbiy6w+2vCVKSUnI/4PwrmsWo6imnNRfMD1dX6fmq+g+zlXQVtHw54yu3BPX+49Lr2nLZlC7tWRm2wl2t1t2WsqWvclxLqVAHAwNyllXX8quRxWZ/aB4gDTbV00vbOxXNurKVyXEnnHSpGxQIx7SkJTjzAJPpnH2eK/EFqB9yTqWQpAGAtbTanR/+hSV55nnnNQtE6fl6y1C6/Peeditr7Sa+tZK3VHntyeZJ55PkP2rTVmJxxQuedAN/+LbQ4H7i7pqoggbAX+I763+vkux4Yafvdxts2XFUxBiycNl19or+8oScloAEENkjxkHxch5Gr/OfltuCRetIqL7SQlNy0+/teSOmNnhWQPdyofCrNGZaYYbjx20ttNpCEISMBIHIACtQj6WtLVsS07CD7wRlSt5ClKx5HPKufwTGsWrZpDTFoY22jhpztsL33WkxOKnc7pJwS5xOoWNWLV5efMaHc419KVFBjOgQ7gkjqOzXtS4R8Nn71a7Terdc3FsR3lIktjc5GeQWnmx6qQoBQHxxg+RqDr7SFrVMVEuNvblMEZZW6gbkgjoFDmCPgR0FU2bpi5R0N91XMy2WSCzEuSlL7LHL8J9P4jRA6YJroaT26ijlNPWsLHA2PMfPf7rTz+z4kbngdcH0/wCfZajSs90fqu5J1BH09eWnWFutqUgzVJDgKduEocT4X858glQwc5qgO8XNbS7rJatcCK4hK1FLKIynVIQDjmQcny512QxamdG2VpuHbW1WkGFVBe5lrEda9A0rA0cReKSyNlhUrn0FscOavS+KNtgX6DYr3DehS3I7KpjiiA3GdWhKtpzzwN2CfL51JHiML97jzCxkw2dm1j5G60KlZy3xl0au5/dCuehndgSlMfhH44zux/TXPqXi1pKzS/urbr9zcHtqhBK0J5Z9okA9fLPxqT36nsTnCi9xqLhuQ3V/pXUaa1FadQ2QXi2ygqLzDhX4S0QMkLHkR/xz6VAXr7RiIxkHUlvKAopIDmVZH8I8RHxxipjNGAHFwsfFQiCQktDTceCs1K6ux6isd8B7pusSYoJ3KQ24CtI9SnqP3FdmpSUpKlEJSBkknAArNrmuFwbhYOa5ps4WK+1V7Dre1XnV1x03EbfL8EEqewC2vaQlWD5YUcc+tVzUnGTTNtkuRYLUm6LRkKcZwlrPTAUeZ/UDHoahcErxof7/ADodjamwrhNV2hamLCytKQTtbUOoGScHxdTzxyourWOmbHG8eP7BX20T2QukkYdtP3K1ilUTX/EaNpHUkC0yLct9EhtLrzwdCezQVFPIY8R8JPUVwzuMGio0gNNypcoZwVsxztHx8WMj9M1M6sga4tc4AhQtoqhzQ5rCQVoNKz7iNqvU0BuyytIWsXOHOAcU6lhTgUDgpTgeyCDnJ/8ABq5Xi7QLNa13G7SW4kdsZWpZ8/QeZPwHM1I2djnOHV8lG6ne1rT2uXPTwU+lZPM442FuV2ca03B9kEguEpQSPUDJ/wB8VfNG6ptGq7YZ1qeJ2EJdZWMONK9FD/yOR5+lYRVkErsrHXKzlo54W5ntsF3lKUqyqyUpSiJSlKIlUXWmvmrfIdtFhbROuiCUurV/gRT/ABkdVfwjn64q9VlmstOxpeqJ02S+dOyHNiIcrswYssgcy8rOAsk7QDtOACN2cCCd5aB1X1/NlYpmNc436tPzdVUNPPTXLjcJLk6e77ch3rj3UjolPwFWPSiXpLV1tkZK1vy4f4KEAlSltuIdwAOpwhVV+6N3GxSUxdQwzCUo4bkpO6O919lfkeWdqsGtF4EWtqfqt2Wt9CFQ45U0nkVFSvCFAHl4cn9yKtGWFlO4x7D7+PNOjldKA/n8reHJWJ216msEmXqiLb2mps0Re2dcKdjAKErkrWB0BWME+Q3H0qg8XrjYtV3/AO+wWluMPRkB8Oo2ntBkf8beY9K9EMqdkPmE4ZIRG2hxxxpO2WCggg+HHU55Y6eleY9YQGbHqC5QRIbcYiOqAcSrICRz5/EDkfQg1Sw97Z3npBqB6W8VYqmuiaMh3P18Fk2omGrXclRY7qnUhIOFjmjPlnzrdeGMeAxoi3G3glDrfaOKUMKU4ThZP7gj9AKxyRb03l5VxkLcaLqsoSMckdE5+OOf71Z9N6ivOnI7cSN2U+A3nbHewhaBnPhWB8T1Br5v7T4PLXMPug0zXte1xqvplLBiDqaM1BLrD11W4WFcFq6sOXEEx0nJwM8/LIHlV8RqK1RYxfXclSEqztSGlblK5Z69PLlyHOsT01rOw3iQ3GW+uFKJAVGkAIcPPHgzyV+xq9SLlbVtCIm3vqjIPg3SPH+vQgfoK4/Da+owlr4nhrHcswde/pyVCrpRM8Xv9P15qHe7g5dLk7NcG3ecJSD7KRyArob9eItnipcfC3XnVbI8dpO519Z6JSnzNfi/XhFt7GMwwubcpStkSG2fG6r1J/KkdSo8gK7HSemVwZSr1enm5t7dTtLiR+HGR/8AG0D0Hqep86n9n/Zupx6czzEiO9y7rPUFBiOJRYfGGjV3ILg0tpqUqejUOpNjl0CT92jJO5qCk9Qn3lnzX+w5VgGj9WSdHapnXOLEZkrdQ4wUOEgAFYVnl5+EV6sJwCcE/AV5Q0VquRpLUUu5tW9qS480tlTT5I25WlXzG3FfVqqlhoGQxQfA1t9h5a+K5ugmkq+mfIMxNtNuvTwW0cK+JEvWN5k26TaG4wajl4OtOFQ5KA2kEee718jVK+0xbOw1FbLskjEuMplSQOe5tWc/uFgftRPHG6oz2VgtyM9cLVzq08Uotx1nwqtt0iWh8TQ43JMZKCpxKSlSVBIxkjmk/oAamfK2qpXRh2Zw12ssY4nUtWyQsyNOm91Uo+hbM/wP/tEltYuqULkl7ecFKXCnZt6Y2j9c/KovBTR1s1NDvsi6MKcDLSWo5CiNi1BWVfqMJxnlzrRdNWG7v8ChYXIyo9xdiPISy8NhBU4spBz0JBHXpnnX44G6WvenLLdGrzGTFckvAto7RKzgJIJJSSMc/wDavI6JpmiOTTLrpztz8UkrXCGYZ9c2mutr8vBUv7PeZ7OpbA8tRjS4XiSD0JCkEj9Qr/YVWuEmj4OsL3KhT5ciO3HY7X8HG5XiA6kHHX0rSuCGiL/pe9XOTeYzbLa2Qy0UupX2niySMHkOXng8+lZPo7VE3ROopkyFGYfcUhcdSHs7QN4OeRHPw1UcwRMh6caDNdXGvMsk/u7tTlt5q18QuG03RMZOpLDdX3GIzid6lEIeYJOEqBHtDJA5AdehGcStccQp124T2xsKLUy4POR5q0DAUloJ3Aem7egnHxHSutmzuJPEsNw0w3EW5at2G2izG5HqpZ9rHXGT8Bmr1feFSXeG8SxwH213SEtUhLq+SXVqHjT8AcJx/KM+dTNje/pDSghpHPmfD0ULpGR9GKpwLweXIePqvvCvhpYGdNQ7peYLVwmzWUvYeG5DSFDISE9M4xknz6VROJdug6X4sW/+zqBHP4D/AGTZ5NuFZG0DyBABx/F6GuW2Xji3pqILKza7itpgdm1ugF4IA8krAII9OZFd1wy0Df7lqlGrtYJeQpDgfQ3I/wAV1weyVJ/KlOBgHHQcsV6Q2ZjIYYyHAi5tt16rwF8D3zTSAtINhffq0XVfaXSf7Z29Xrb0j/8Ao59avGk+EOmY1mim9wlzbgUJW+VPrSlKzzKQEkAgdPPOK6D7RFgu9yvVol222ypiSwplRYaK9qgrIBx09rz+NbOzu7JG8YVtGR8auQUrH1crpG32tfxVOeqeykibG6297eCw/wC0ukR3NPRWB2Udtp0IaRySnGwDAHIYHKuo4lzbjqvXVn0uH1JbQ3GaGeY7R1CVKcI8yAr/AG+Nd79puNJclWF1thxbZDre5KSRvJRhP6nyHniuTidw+vj8qDqfTrbi5rUdn7wyhW11C20gJWj1ICQMDnkDGc8qdVHI+WUNFxdtx4WVykkjZFCXEA2dYnrurxbeGejIdqEBVmZlEpwt97xOqOOZ3fl/bFZjwCJicS7nAiPKcifd3k5zyUEOJCVH4/8AY1wTNR8XrnBNpXbbonth2a3EW1TayDy5q2gJ/XlWhcGdBO6ThPT7oGzdJaQkpSQoMt9duR1JOCccuQqdmWonjMLMobubW9FA/NTwSCaTMXbC9/VaJSlK3q0KUpSiJSlKIlfh1tt5pTTraXG1jCkqGQR6EV+6V4irkvTCW4zjFpfQxGWCF2+S328RY9NhOUf0kD4GqBd9NyrDIEy3F/TziFbh+It+BnPVLqRvY69VgJ+VbFXyoHU4OrTYqyypc3R2oWLTNb6nDSId7u9zipfT4CuWVsPpwM7HUnasc/WqrqKSmS6i0sryV+OTtPsoH5f1PL9q3G8aK07c0vJchGOJBy+IzhaS9/OlPhUfiRkeRFYMmIId1uTLkAW6QJK+0iZz2Az4Ug+Yx0PQ55VUqqiaKPoiBZ3MdX21XReztBT19c0kn4dbH9Nbq66Y4f3XUcr7taZMZSkNNuuF1LiEoQtIUCVBJT54xnOQeWATXY6p4U33TcBVxuEyE5CQMuORw44UegKdvn6nA9SOWdf4Ux1Hhpp9NompjHeHZK+xDnagOK7RvmeRPTPUAcqtFrlKuL0mWt1/7g6kNIiyYZZUhSSreo7gCQrI68vDyrVZl1FRj1THM4NtlabWtrvbe2l9wvHl7gMJlyoLgLrbTqmwpaNqjgkZxk4P7mrDwpa1lPgzza7oxIiQnQw0i4blJcOCSErHiTtGzlzBz5V1Grm+01VcINtWCp+c8hhZPsoClErPwSkEk/Cte4U2Zmy6HgsNt7FSAZK8+0d/NO7+IJ2g/pWJwynxF/RzsDmgKL2pxMU8bBH/AOmmvgpGktMtWcuT5j3368yR/eZik88e4gflQPQdepqxVivGiTfn+JNnsNqvcyEibHaSlDb620JWp1adxCTz6D5VGXe+IHDS4xxqN9d5s7y9valwuZ5ZIStXiSoDyVyODj1G0jqYaUdCyOzGaXGwXDPo5akCRzwXu1sdytzrjUyyokqabJPUlIqk8SdesWDRsW7WsokP3NI+4lQ5bSncVkHngAjl6kZrPZ1o4tpsB1S7fZgJR264iJSkuIbxkktgBA5c9o5j0zyqxNXNY7K1pcQLm3IKCChdI3M5waCbC/MreAyyOjTY/pFclUrh9rNWpdEP3NDIXcoTakvsJ/O4lOQQBzwr/nI8qxu03nUWqpj0iZxEbsz5WdrL0p1hGPUbRsA54655VjLiEbA0tF823L7rKHDpJC8ONsu/P7L0zSuh0BHmxtJQmrheG7xIAUTMbd7RLgKiRhR5qwMDPwqlcZ9VXuPdrdpDTTi2Z88JUt1s4WApRSlKVfl5gknyGOfWp5KkRRdI4ennyUEVM6Wbomnr15ac1qdZroPh7cNPcQLpfpEqKuE+HRHQgkrwtYUNwIwMAeRPOqXqTR2sdDWr+1UfVLjz7S0mUEKXy3KABO4kODJGQoDrUzjDqBWoOFmnLqg9n97kZeQjITvSlSVDHoFA4qhNVNd8UrCHM1Av6LYQ0rm/DE8Fr9Cbbc1uVcUiTHjRlyZD7TLCBlbjiwlKR6knkKx7RuuhcuE18gTn1C5223OISoq8TjZSUoX65BIBP6HzqBpVqCj7PF1dujcp+KZZc2MOhC8720pAJBAG4ZPI+fKp+INcAWDdpPlZV+HOaSHnZwb535rb3ZUZlhMh2Qy2yrG1xSwEnPTn055GK5q878VZkWXw40Uu2tvsQi28lLTjm8go2p5nkCQQrngdeg6Va+HfEuO1w/mi8ug3GzM7UoWcKkJ9lv45zhJ/YnrXjMSYZTG7TQG/pdevwyQRCRuupFvWy09F3tS7qq1IuURU9KdyoweSXAMZ5pznpzqdXmjgzMdm8W41wmObnnvvDzqzyyotrJP+9d8h/VXFnUU9u3XRy2WKKoADcpKdpJ25SPbWQCeZwPlmOLE+kZcNuSSAPJSTYX0cmUusAAST4reK4hKjGYYYkMmSEdoWd43hOcbtvXGfOsV01K1Fw84jQNL3S5OXG2XAoQ1lRIG9RSlSQT4CFdR6evKu/W9YmPtBIaMKcbm/Gx25kDsQrsvJG3J8CcZ3Yz5edTtrswFxY5gCCoHUOUmxuMpcCFqNKxHjTqe+ta2Z0/HvS7HbwyhZkJK07irPiJQCrHLbgcs9fh3nCGBd2b09Ika9i3+IYxH3Zqct9SVEjCilXs+fzo2uDpjE1uxtfT7I6gLYBK524vbX77LUqUpV9UEpSlESlKURKUpREpSlESqZxJ0W3qOOJ8AoYvMdGGnDyS8nr2a/h6HyP71c6VHJG2VuV2ymp6iSmkEsRs4LHeG/Em9aNW/b3IaX2EOFMiC+di2XB1wrHLP6EGrFq3jVc7paXIFrtTVq7UYW8Xu1WB57fCkJPx5/DB51z8TNEi/N97WkIavLCcDPJMlA/Io+vofLoeXTLNL2l3VGpGtP7XI23cu4BQ2rZbSQFJwfzEkJ+Gc1opYHRPyEXvt4/nNfSKHE8MrIHVc7AJGakdfjbY38l3WjLGufGamvp/FvjxhxU5wUQ0HdIdx/EE7B09oe9W4gAAADAHQVWtLR2Zl1kXhlCUQY7fd9sQn2UtIP4i0/zLAT+jST0NWattRwiNnn+fnhZcFidY+rnMj9z9PD0FgsR4sz4tt426fnznOyixo7Dji9pVtAdcOcDma4+KuvoOr4LeldLxJFwckvIJd7IjOOYCEnnn1JAwAevUaxqTSuntRqaVebWzLW1yQskpWB6bkkHHPp0rksWm7DYypVptMSItQwpbbfjI9Co88VVfRzuc9ocA1x16/2UjK2BrWOLSXNGnV+6ynizo26M8OdOFlCpTtlZLcpLQ3YCgncoeZSkpx+hz0BrnlccoirMRFskjvNTeAlak9ilfrkcyPhgZ6cutbLUVFut6JJlIgRUvnq6GUhZ/fGakdRPa8uhfluADpfbQKNtbG5gbMzNYkjW2+pWb8ErDc9LaNul2uEJ/7zKHbNwwnDhS2klIx1ClEkYx6etUafqDhje2ZE67aauNtuilErbgugpWTnmMkJB8zlI/evRddNO0rpqdOM6ZYbbIkk5U45HSSo/Hlz/esZKF3RNjjIsOsX9VlHXt6V0kgNz1G3os7+zSzdUWe6OvodTa3HUGJv6FY3Bwp+HsgnpkfA1WOJ1quE/jgIUeWYD01LP3aQVKG38MJyCOftJUOVegm0IbQlDaUoQkYCUjAAqFJs1qlXaPdZECO7Ojp2svqQCtA58gf3PzNH4fenZDm2N0ZiOWofNl/uFvz5arCtc8NLrYtKzL3cdTqmdhsyzsUd5UtKfaKvjnp5VHuVpvFy4M6VbttulTf73JUoMNlZTlagMgeR58+lehLhDiXCG5DnR2pMd0YW04kKSofEGv1DjR4UVqJEYbYYaSEttoThKQPICsHYUzMcpsCLeO9+azbi0mVuYXIN+oWtbksQ41aCkQSvVFlbV2K28XFpvqg4wXMDqk/m9Dz6E47GywnHPs0yW+zIUpp17BHUJeKs/JNbGQCMEZFflbba2i0tCVNqTtKCMgj0x6VLw5gkc9ptmBFvPmouJPMbGOF8pBv5cl5nvwVI4K6bfCTiJcJDBOPfJX/4q0a24W3S7aggXKyx0IjXBttU7ctKDHcIG9W04JB64GTnd8K2yLDhxYqIkaKwxHb9hptsJQnnnkByFc9RtwphFpDfQfTRSuxZ7TeMW1d9dVgC7c3bOOj9ptyC023BUywB/wDRwD+uR19a6Xhho286qt8tVu1B3cwy6EutBS/ESOSsAgH0/avSJhQzOE8xGDLDfZh8tjtAjrt3dcfCuCzWa1WZt1u1W+PDQ8vtHEsoCQpXrWPCgX3cdLk223ssuLER2aPisBffa9158umk5GleJumbc9dlXF5+THd3lsp2AvYxzUc9DVo4gKVA+0Dp6SgH8cRwf6lqbP8AtWuy7TbJdwj3GTAjPS43+A8tsFbf6HyrlehQ3pbMx6Iw5JYz2LymwVt567T1GfhWQw3KCGmwzAj0WBxPMQ5wucpB9VlvFXUulhqlNg1bph9+K02lbU9CyFgqAJ2gYJSOh8XUdDVD0ymDI4q2k6Aj3JuO24hTxkEEhAV+Io46I2nHM5yfUivRN3tNru8cR7pb401pJylLzYXtPqM9DXy0Wm12hgs2u3xYTajlSWGgjcfU460loHyy5nOFr3218rpFiEcUORrTe1t9POynUpStqtUlKUoiUpSiJSlKIlKUoiUpSiJXT3rTlsuiVrLaoktSt33uLht8HG0+LHPKfDzzy/QV3FKxc0OFiF617mm7SuKJHZiRWosZtLTLKAhtCeiUgYAFctKV6BZeE3Sukv8AcdQQ5aG7TpxNzZKNynTOQztVk+HBBzywc/Gu7pWL2lwsDbyt+oKlhkbG7M5gcOo3t9CD9VU++9af5Gb/ANXb/wCtO+9af5Gb/wBXb/61bKVD0D+8d/r/ABVv32H/AB2fOT+ag2STcZUHtbpbRbpG4jsQ+HuXkdwAFVfiLH1LMu9piafflMBxqR2riHlNNpUAjYVqCVeecA9eYq7UrKWHpI+jLjy15rCmrPd6jp2sHPTUjUEcyTpfmVS+IR1BG0fbkQn5bk9MhhEp2GleVDae0VhAKgnPPkP2rsbVHkTtDNsOTLm1IU2SXty0PhQUTyK0hWMjHMcxVjpWIp/6hdfQi1lmcQ/oNiDQC12a/wClrKucOmJ7WlIj10k3B6bISHHhMUSttXTaARkDl0+NfOIyrknS7ptTspqR2rY3x21LUE7hnIT4gMdSnJA8qslK96D+j0V+VrrD30+9+8lo/uvblvsqZZJF6d4XzHXWri3c0xZIZ7YqU+pQCtih4Uq5nGMjPTrXHw8d1Su6SBqHtOz7vilrksI3EHdnd/7nTdjzq70rBtKQ5jsx+EfPzU78Sa5krBEBnN/FuoNh8lmsJ/VH9skpcXefvBu7iXGlNq+4iDt5KBxt3dMc8561J1zF1dP1o1EsEqVFj92hfa9qpthLvaEZJCVBRxjw+Y/StBpWHuV2FhedTdTcZtM2VsTbhtrW08/TkPqvw0FhpAcUFLCQFKAxk+ZxVZfvOsEPuIa0Uh1tKiEL71bTuGeRxt5VaaVZkjc4CziPK36grWwTsjJL4w+/Xm0/+SFU+/Naf5Gb/wBXb/60771p/kZv/V2/+tWylR9A/vHf6/xVn32H/HZ85P5r4OlfaUqytclKUoiUpSiJSlKIlKUoiUpSiJSlKIlKUoiUpSiJSlKIlKUoiUpSiJSlKIlKUoiUpSiJSlKIlKUoiUpSiJSlKIlKUoiUpSiL/9k=" alt="Empório dos Animais" class="logo-cliente-grande">
+    </div>
+
+    <div class="selo-personalizado">Briefing exclusivo · Empório dos Animais</div>
     <div class="marca-assinatura">DIAGNÓSTICO &amp; SOLUÇÕES EMPRESARIAIS</div>
 
-    <h1>Diagnóstico do Negócio</h1>
-    <p class="subtitulo">O ponto de partida para identificar dores, gaps e oportunidades que o ERP padrão não resolve — e desenhar a solução sob medida.</p>
+    <h1>Diagnóstico do Delivery</h1>
+    <p class="subtitulo">Um briefing estruturado, preparado sob medida para o <strong>Empório dos Animais</strong>, voltado à organização, gestão e processos do canal de entregas — e ao desenho do app de delivery.</p>
 
     <div class="info-box">
       <h3>Sobre este formulário</h3>
-      <p style="margin-bottom: 1rem; line-height: 1.6;">Este é o briefing estruturado da consultoria. Suas respostas formarão a base do diagnóstico empresarial e da proposta que será apresentada na reunião presencial.</p>
+      <p style="margin-bottom: 1rem; line-height: 1.6;">Este briefing foi elaborado especificamente para a operação do <span class="cliente-mencao">Empório dos Animais</span>. Suas respostas formarão a base do diagnóstico do delivery e da proposta que será apresentada na reunião presencial.</p>
       <h3>Como funciona</h3>
       <ul>
         <li>Você avança em etapas, no seu ritmo</li>
         <li>Tudo é salvo automaticamente — pode fechar e voltar depois</li>
         <li>Ao final, você baixa um documento Word e uma planilha Excel</li>
-        <li>O sistema abre seu e-mail com tudo pronto para enviar</li>
+        <li>O sistema abre seu e-mail com tudo pronto para o consultor</li>
       </ul>
     </div>
 
@@ -20957,14 +21068,19 @@ table.dados input[type="text"] {
   <div class="etapa-card">
     <span class="etapa-numero">Etapa 1 de 12</span>
     <h2>Vamos nos conhecer</h2>
-    <p class="descricao">Dados básicos sobre quem está preenchendo e sobre a empresa.</p>
+    <p class="descricao">Dados básicos sobre quem está preenchendo e sobre o Empório dos Animais.</p>
+
+    <div class="bloco-personalizado">
+      <span class="selo-pequeno">Sobre o cliente</span>
+      <p>Este briefing é dedicado exclusivamente ao <strong>Empório dos Animais</strong>. As perguntas a seguir partem dessa realidade — sua rede de lojas, seus clientes, sua operação de delivery.</p>
+    </div>
 
     <div class="pergunta">
       <label class="titulo"><span class="num">1.1</span> Seu nome completo</label>
       <input type="text" data-campo="nome" placeholder="Ex: Bruno Silva">
     </div>
     <div class="pergunta">
-      <label class="titulo"><span class="num">1.2</span> Seu cargo / função na empresa</label>
+      <label class="titulo"><span class="num">1.2</span> Seu cargo / função no Empório dos Animais</label>
       <input type="text" data-campo="cargo" placeholder="Ex: Sócio-proprietário, Gerente Geral">
     </div>
     <div class="pergunta">
@@ -20976,11 +21092,11 @@ table.dados input[type="text"] {
       <input type="tel" data-campo="whatsapp" placeholder="(00) 00000-0000">
     </div>
     <div class="pergunta">
-      <label class="titulo"><span class="num">1.5</span> Há quanto tempo a empresa existe?</label>
+      <label class="titulo"><span class="num">1.5</span> Há quanto tempo o Empório dos Animais existe?</label>
       <input type="text" data-campo="tempo_mercado" placeholder="Ex: 8 anos">
     </div>
     <div class="pergunta">
-      <label class="titulo"><span class="num">1.6</span> Quantas lojas/unidades a empresa possui hoje?</label>
+      <label class="titulo"><span class="num">1.6</span> Quantas lojas o Empório dos Animais possui hoje?</label>
       <span class="sub">Este número definirá quantos espaços de preenchimento haverá nas etapas seguintes.</span>
       <input type="number" data-campo="qtd_lojas" min="1" max="20" placeholder="Ex: 5" oninput="atualizarQtdLojas(this.value)">
     </div>
@@ -20996,16 +21112,16 @@ table.dados input[type="text"] {
   <div class="etapa-card">
     <span class="etapa-numero">Etapa 2 de 12</span>
     <h2>Visão estratégica do delivery</h2>
-    <p class="descricao">Entender o "porquê" do projeto — isso guiará todo o desenho da solução.</p>
+    <p class="descricao">Entender o "porquê" do projeto para o Empório dos Animais — isso guiará todo o desenho da solução.</p>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">2.1</span> Por que decidiu investir em um app de delivery agora?</label>
+      <label class="titulo"><span class="num">2.1</span> Por que o Empório dos Animais decidiu investir em um app de delivery agora?</label>
       <span class="sub">O que aconteceu no negócio ou no mercado que motivou essa decisão?</span>
       <textarea data-campo="motivo_investir" rows="4"></textarea>
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">2.2</span> Onde quer que o delivery esteja em 24 meses?</label>
+      <label class="titulo"><span class="num">2.2</span> Onde o Empório dos Animais quer estar daqui a 24 meses no delivery?</label>
       <span class="sub">Pense em volume, participação no faturamento e posição no mercado.</span>
       <textarea data-campo="visao_24_meses" rows="4"></textarea>
     </div>
@@ -21025,7 +21141,7 @@ table.dados input[type="text"] {
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">2.4</span> Quem são seus 3 principais concorrentes no delivery?</label>
+      <label class="titulo"><span class="num">2.4</span> Quais são os 3 principais concorrentes do Empório dos Animais no delivery?</label>
       <span class="sub">Incluindo grandes redes. O que cada um faz melhor que vocês hoje?</span>
       <textarea data-campo="concorrentes" rows="5"></textarea>
     </div>
@@ -21051,7 +21167,7 @@ table.dados input[type="text"] {
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">2.7</span> Quem são os tomadores de decisão deste projeto?</label>
+      <label class="titulo"><span class="num">2.7</span> Quem são os tomadores de decisão deste projeto no Empório dos Animais?</label>
       <span class="sub">Nomes, cargos e nível de envolvimento (decisor, influenciador, executor).</span>
       <textarea data-campo="decisores" rows="4"></textarea>
     </div>
@@ -21062,19 +21178,19 @@ table.dados input[type="text"] {
   </div>
 </div>
 
-<!-- ============ ETAPA 3: AS LOJAS ============ -->
+<!-- ============ ETAPA 3: AS LOJAS DO EMPÓRIO DOS ANIMAIS ============ -->
 <div class="etapa" data-etapa="3">
   <div class="etapa-card">
     <span class="etapa-numero">Etapa 3 de 12</span>
-    <h2>Caracterização das lojas</h2>
-    <p class="descricao">Para cada loja, descreva brevemente a operação do delivery.</p>
+    <h2>As lojas do Empório dos Animais</h2>
+    <p class="descricao">Para cada loja do Empório dos Animais, descreva brevemente a operação do delivery.</p>
 
     <div id="lojasContainer">
       <!-- Preenchido dinamicamente -->
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num" id="num_padronizacao">3.X</span> Como as lojas operam o delivery?</label>
+      <label class="titulo"><span class="num" id="num_padronizacao">3.X</span> Como as lojas do Empório dos Animais operam o delivery?</label>
       <div class="opcoes" data-radio="padronizacao">
         <label class="opcao"><input type="radio" name="padronizacao" value="Totalmente padronizadas (mesmos processos, sistemas, equipe)"><span class="marcador"></span><span class="texto">Totalmente padronizadas (mesmos processos, sistemas, equipe)</span></label>
         <label class="opcao"><input type="radio" name="padronizacao" value="Padronização parcial (algumas coisas iguais, outras variam)"><span class="marcador"></span><span class="texto">Padronização parcial (algumas coisas iguais, outras variam)</span></label>
@@ -21083,13 +21199,13 @@ table.dados input[type="text"] {
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num" id="num_destaque">3.Y</span> Alguma loja entrega melhor que as outras? Por quê?</label>
+      <label class="titulo"><span class="num" id="num_destaque">3.Y</span> Alguma loja do Empório dos Animais entrega melhor que as outras? Por quê?</label>
       <span class="sub">Boas práticas internas podem ser replicadas.</span>
       <textarea data-campo="loja_destaque" rows="4"></textarea>
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num" id="num_sobreposicao">3.Z</span> Existe sobreposição de área de entrega entre as lojas?</label>
+      <label class="titulo"><span class="num" id="num_sobreposicao">3.Z</span> Existe sobreposição de área de entrega entre as lojas do Empório dos Animais?</label>
       <div class="opcoes" data-radio="sobreposicao">
         <label class="opcao"><input type="radio" name="sobreposicao" value="Não, cada loja atende uma região distinta"><span class="marcador"></span><span class="texto">Não, cada loja atende uma região distinta</span></label>
         <label class="opcao"><input type="radio" name="sobreposicao" value="Sim, há sobreposição em alguns bairros"><span class="marcador"></span><span class="texto">Sim, há sobreposição em alguns bairros</span></label>
@@ -21109,10 +21225,10 @@ table.dados input[type="text"] {
   <div class="etapa-card">
     <span class="etapa-numero">Etapa 4 de 12</span>
     <h2>Processo atual do delivery</h2>
-    <p class="descricao">Vamos mapear cada etapa do delivery, do recebimento ao pós-venda.</p>
+    <p class="descricao">Vamos mapear cada etapa do delivery do Empório dos Animais, do recebimento ao pós-venda.</p>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">4.1</span> Por quais canais o pedido de delivery entra hoje?</label>
+      <label class="titulo"><span class="num">4.1</span> Por quais canais o pedido de delivery chega ao Empório dos Animais hoje?</label>
       <div class="opcoes" data-multi="canais">
         <label class="opcao"><input type="checkbox" value="WhatsApp"><span class="marcador"></span><span class="texto">WhatsApp</span></label>
         <label class="opcao"><input type="checkbox" value="Telefone"><span class="marcador"></span><span class="texto">Telefone</span></label>
@@ -21132,13 +21248,13 @@ table.dados input[type="text"] {
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">4.3</span> Quem recebe e registra o pedido?</label>
+      <label class="titulo"><span class="num">4.3</span> Quem recebe e registra o pedido no Empório dos Animais?</label>
       <div class="opcoes" data-multi="quem_recebe">
         <label class="opcao"><input type="checkbox" value="Atendente dedicado(a) ao delivery"><span class="marcador"></span><span class="texto">Atendente dedicado(a) ao delivery</span></label>
         <label class="opcao"><input type="checkbox" value="Atendentes de balcão que se revezam"><span class="marcador"></span><span class="texto">Atendentes de balcão que se revezam</span></label>
         <label class="opcao"><input type="checkbox" value="Vendedor(a) responsável da loja"><span class="marcador"></span><span class="texto">Vendedor(a) responsável da loja</span></label>
       </div>
-      <textarea data-campo="quem_recebe_obs" rows="2" placeholder="Esse processo é o mesmo em todas as lojas?" style="margin-top: 0.8rem;"></textarea>
+      <textarea data-campo="quem_recebe_obs" rows="2" placeholder="Esse processo é o mesmo em todas as lojas do Empório dos Animais?" style="margin-top: 0.8rem;"></textarea>
     </div>
 
     <div class="pergunta">
@@ -21159,7 +21275,7 @@ table.dados input[type="text"] {
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">4.6</span> Como o entregador sabe a rota? Há roteirização?</label>
+      <label class="titulo"><span class="num">4.6</span> Como o entregador do Empório dos Animais sabe a rota? Há roteirização?</label>
       <div class="opcoes" data-radio="rota">
         <label class="opcao"><input type="radio" name="rota" value="Cada entregador escolhe a rota livremente"><span class="marcador"></span><span class="texto">Cada entregador escolhe a rota livremente</span></label>
         <label class="opcao"><input type="radio" name="rota" value="Atendente define rota manualmente"><span class="marcador"></span><span class="texto">Atendente define rota manualmente</span></label>
@@ -21170,7 +21286,7 @@ table.dados input[type="text"] {
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">4.7</span> Como o cliente acompanha a entrega?</label>
+      <label class="titulo"><span class="num">4.7</span> Como o cliente do Empório dos Animais acompanha a entrega?</label>
       <div class="opcoes" data-multi="acompanhamento">
         <label class="opcao"><input type="checkbox" value="Recebe ligação ou WhatsApp quando o entregador sai"><span class="marcador"></span><span class="texto">Recebe ligação ou WhatsApp quando o entregador sai</span></label>
         <label class="opcao"><input type="checkbox" value="Tem código de rastreio ou link"><span class="marcador"></span><span class="texto">Tem código de rastreio ou link</span></label>
@@ -21189,7 +21305,7 @@ table.dados input[type="text"] {
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">4.9</span> Como tratam reclamações, devoluções e avaliações do delivery?</label>
+      <label class="titulo"><span class="num">4.9</span> Como o Empório dos Animais trata reclamações, devoluções e avaliações do delivery?</label>
       <textarea data-campo="pos_venda" rows="4"></textarea>
     </div>
   </div>
@@ -21199,14 +21315,14 @@ table.dados input[type="text"] {
   </div>
 </div>
 
-<!-- ============ ETAPA 5: FATURAMENTO E PEDIDOS ============ -->
+<!-- ============ ETAPA 5: FATURAMENTO ============ -->
 <div class="etapa" data-etapa="5">
   <div class="etapa-card">
     <span class="etapa-numero">Etapa 5 de 12</span>
     <h2>Faturamento do delivery</h2>
-    <p class="descricao">Dados numéricos do faturamento mensal. Use valores aproximados se não tiver exatos.</p>
+    <p class="descricao">Dados numéricos do faturamento mensal do Empório dos Animais. Use valores aproximados se não tiver exatos.</p>
 
-    <h3 style="color: var(--dourado); margin: 1.5rem 0 0.8rem; font-size: 1.05rem; font-family: 'Playfair Display', Georgia, serif;">Faturamento bruto mensal por loja (R$)</h3>
+    <h3 style="color: var(--verde-escuro); margin: 1.5rem 0 0.8rem; font-size: 1.1rem;">Faturamento bruto mensal por loja (R$)</h3>
     <div class="tabela-container">
       <table class="dados">
         <thead>
@@ -21225,7 +21341,7 @@ table.dados input[type="text"] {
       </table>
     </div>
 
-    <h3 style="color: var(--dourado); margin: 1.5rem 0 0.8rem; font-size: 1.05rem; font-family: 'Playfair Display', Georgia, serif;">Faturamento do delivery por loja (R$)</h3>
+    <h3 style="color: var(--verde-escuro); margin: 1.5rem 0 0.8rem; font-size: 1.1rem;">Faturamento do delivery por loja (R$)</h3>
     <p class="sub" style="margin-bottom: 0.8rem;">Quanto desse total veio especificamente do canal delivery.</p>
     <div class="tabela-container">
       <table class="dados">
@@ -21245,7 +21361,7 @@ table.dados input[type="text"] {
       </table>
     </div>
 
-    <h3 style="color: var(--dourado); margin: 1.5rem 0 0.8rem; font-size: 1.05rem; font-family: 'Playfair Display', Georgia, serif;">Volume de pedidos do delivery</h3>
+    <h3 style="color: var(--verde-escuro); margin: 1.5rem 0 0.8rem; font-size: 1.1rem;">Volume de pedidos do delivery</h3>
     <div class="tabela-container">
       <table class="dados">
         <thead>
@@ -21263,7 +21379,7 @@ table.dados input[type="text"] {
       </table>
     </div>
 
-    <h3 style="color: var(--dourado); margin: 1.5rem 0 0.8rem; font-size: 1.05rem; font-family: 'Playfair Display', Georgia, serif;">Tempo médio de entrega (em minutos)</h3>
+    <h3 style="color: var(--verde-escuro); margin: 1.5rem 0 0.8rem; font-size: 1.1rem;">Tempo médio de entrega (em minutos)</h3>
     <div class="tabela-container">
       <table class="dados">
         <thead>
@@ -21286,12 +21402,12 @@ table.dados input[type="text"] {
   </div>
 </div>
 
-<!-- ============ ETAPA 6: CUSTOS DO DELIVERY ============ -->
+<!-- ============ ETAPA 6: CUSTOS ============ -->
 <div class="etapa" data-etapa="6">
   <div class="etapa-card">
     <span class="etapa-numero">Etapa 6 de 12</span>
     <h2>Custos operacionais do delivery</h2>
-    <p class="descricao">Estimativa dos principais custos mensais relacionados ao canal delivery (rede total).</p>
+    <p class="descricao">Estimativa dos principais custos mensais do delivery no Empório dos Animais (rede total).</p>
 
     <div class="custos-grid" id="custosGrid"></div>
   </div>
@@ -21306,10 +21422,10 @@ table.dados input[type="text"] {
   <div class="etapa-card">
     <span class="etapa-numero">Etapa 7 de 12</span>
     <h2>Frota e entregadores</h2>
-    <p class="descricao">Composição da frota dedicada ao delivery e produtividade.</p>
+    <p class="descricao">Composição da frota dedicada ao delivery do Empório dos Animais e produtividade.</p>
 
     <div class="pergunta">
-      <label class="titulo">A frota de entregadores é:</label>
+      <label class="titulo">A frota de entregadores do Empório dos Animais é:</label>
       <div class="opcoes" data-radio="frota_tipo">
         <label class="opcao"><input type="radio" name="frota_tipo" value="100% própria (CLT ou PJ fixo)"><span class="marcador"></span><span class="texto">100% própria (CLT ou PJ fixo)</span></label>
         <label class="opcao"><input type="radio" name="frota_tipo" value="100% terceirizada (motoboys avulsos, apps)"><span class="marcador"></span><span class="texto">100% terceirizada (motoboys avulsos, apps)</span></label>
@@ -21327,7 +21443,7 @@ table.dados input[type="text"] {
       </div>
     </div>
 
-    <h3 style="color: var(--dourado); margin: 1.5rem 0 0.8rem; font-size: 1.05rem; font-family: 'Playfair Display', Georgia, serif;">Composição da frota por loja</h3>
+    <h3 style="color: var(--verde-escuro); margin: 1.5rem 0 0.8rem; font-size: 1.1rem;">Composição da frota por loja do Empório dos Animais</h3>
     <div class="tabela-container">
       <table class="dados">
         <thead>
@@ -21355,15 +21471,15 @@ table.dados input[type="text"] {
   <div class="etapa-card">
     <span class="etapa-numero">Etapa 8 de 12</span>
     <h2>Dores e desejos do delivery</h2>
-    <p class="descricao">Esta é uma das seções mais importantes — quanto mais sincero, melhor o diagnóstico.</p>
+    <p class="descricao">Esta é uma das seções mais importantes — quanto mais sincero, melhor o diagnóstico para o Empório dos Animais.</p>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">8.1</span> Se pudesse resolver UMA ÚNICA coisa no delivery hoje, qual seria?</label>
+      <label class="titulo"><span class="num">8.1</span> Se pudesse resolver UMA ÚNICA coisa no delivery do Empório dos Animais hoje, qual seria?</label>
       <textarea data-campo="dor_principal" rows="4"></textarea>
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">8.2</span> Liste as 5 maiores dores do delivery hoje</label>
+      <label class="titulo"><span class="num">8.2</span> Liste as 5 maiores dores do delivery do Empório dos Animais hoje</label>
       <input type="text" data-campo="dor_1" placeholder="Dor 1" style="margin-bottom: 0.6rem;">
       <input type="text" data-campo="dor_2" placeholder="Dor 2" style="margin-bottom: 0.6rem;">
       <input type="text" data-campo="dor_3" placeholder="Dor 3" style="margin-bottom: 0.6rem;">
@@ -21372,26 +21488,26 @@ table.dados input[type="text"] {
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">8.3</span> Quais as 3 reclamações mais frequentes dos clientes sobre o delivery?</label>
+      <label class="titulo"><span class="num">8.3</span> Quais as 3 reclamações mais frequentes dos clientes do Empório dos Animais sobre o delivery?</label>
       <input type="text" data-campo="reclamacao_1" placeholder="Reclamação 1" style="margin-bottom: 0.6rem;">
       <input type="text" data-campo="reclamacao_2" placeholder="Reclamação 2" style="margin-bottom: 0.6rem;">
       <input type="text" data-campo="reclamacao_3" placeholder="Reclamação 3">
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">8.4</span> Onde acredita que está perdendo dinheiro no delivery hoje?</label>
+      <label class="titulo"><span class="num">8.4</span> Onde o Empório dos Animais acredita estar perdendo dinheiro no delivery hoje?</label>
       <span class="sub">Erros, retrabalho, frete mal calculado, devoluções, etc.</span>
       <textarea data-campo="perda_dinheiro" rows="4"></textarea>
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">8.5</span> O que gostaria que o app fizesse, mesmo que pareça "sonho"?</label>
+      <label class="titulo"><span class="num">8.5</span> O que o Empório dos Animais gostaria que o app fizesse, mesmo que pareça "sonho"?</label>
       <span class="sub">Não se preocupe com viabilidade agora — liste tudo.</span>
       <textarea data-campo="sonho" rows="5"></textarea>
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">8.6</span> Já tentaram alguma solução tecnológica antes para o delivery?</label>
+      <label class="titulo"><span class="num">8.6</span> O Empório dos Animais já tentou alguma solução tecnológica antes para o delivery?</label>
       <div class="opcoes" data-radio="tentativa_anterior">
         <label class="opcao"><input type="radio" name="tentativa_anterior" value="Sim, e funcionou bem"><span class="marcador"></span><span class="texto">Sim, e funcionou bem</span></label>
         <label class="opcao"><input type="radio" name="tentativa_anterior" value="Sim, mas não deu certo"><span class="marcador"></span><span class="texto">Sim, mas não deu certo</span></label>
@@ -21406,15 +21522,15 @@ table.dados input[type="text"] {
   </div>
 </div>
 
-<!-- ============ ETAPA 9: PRODUTOS NO DELIVERY ============ -->
+<!-- ============ ETAPA 9: PRODUTOS ============ -->
 <div class="etapa" data-etapa="9">
   <div class="etapa-card">
     <span class="etapa-numero">Etapa 9 de 12</span>
     <h2>Produtos vendidos no delivery</h2>
-    <p class="descricao">Particularidades dos produtos que circulam pelo canal delivery.</p>
+    <p class="descricao">Particularidades dos produtos do Empório dos Animais que circulam pelo canal delivery.</p>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">9.1</span> Quais os 5 produtos mais vendidos no delivery hoje?</label>
+      <label class="titulo"><span class="num">9.1</span> Quais os 5 produtos mais vendidos no delivery do Empório dos Animais hoje?</label>
       <input type="text" data-campo="produto_1" placeholder="Produto 1" style="margin-bottom: 0.6rem;">
       <input type="text" data-campo="produto_2" placeholder="Produto 2" style="margin-bottom: 0.6rem;">
       <input type="text" data-campo="produto_3" placeholder="Produto 3" style="margin-bottom: 0.6rem;">
@@ -21423,7 +21539,7 @@ table.dados input[type="text"] {
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">9.2</span> Quais categorias circulam pelo delivery?</label>
+      <label class="titulo"><span class="num">9.2</span> Quais categorias circulam pelo delivery do Empório dos Animais?</label>
       <div class="opcoes" data-multi="categorias">
         <label class="opcao"><input type="checkbox" value="Ração (sacos pesados de 10-20 kg)"><span class="marcador"></span><span class="texto">Ração (sacos pesados de 10-20 kg)</span></label>
         <label class="opcao"><input type="checkbox" value="Medicamentos veterinários (incluindo controlados)"><span class="marcador"></span><span class="texto">Medicamentos veterinários (incluindo controlados)</span></label>
@@ -21435,7 +21551,7 @@ table.dados input[type="text"] {
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">9.3</span> Existe programa de assinatura ou recompra automática hoje?</label>
+      <label class="titulo"><span class="num">9.3</span> Existe programa de assinatura ou recompra automática no Empório dos Animais hoje?</label>
       <div class="opcoes" data-radio="assinatura">
         <label class="opcao"><input type="radio" name="assinatura" value="Sim, ativo"><span class="marcador"></span><span class="texto">Sim, ativo</span></label>
         <label class="opcao"><input type="radio" name="assinatura" value="Já tentamos no passado"><span class="marcador"></span><span class="texto">Já tentamos no passado</span></label>
@@ -21461,15 +21577,15 @@ table.dados input[type="text"] {
   <div class="etapa-card">
     <span class="etapa-numero">Etapa 10 de 12</span>
     <h2>Sistemas e tecnologia atual</h2>
-    <p class="descricao">Como o delivery está conectado (ou não) com os sistemas da operação.</p>
+    <p class="descricao">Como o delivery do Empório dos Animais está conectado (ou não) com os sistemas da operação.</p>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">10.1</span> Qual ERP / sistema de gestão é usado nas lojas?</label>
+      <label class="titulo"><span class="num">10.1</span> Qual ERP / sistema de gestão é usado nas lojas do Empório dos Animais?</label>
       <input type="text" data-campo="erp" placeholder="Ex: Bling, Tiny, Linx, sistema próprio...">
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">10.2</span> Há integração de delivery entre as lojas?</label>
+      <label class="titulo"><span class="num">10.2</span> Há integração de delivery entre as lojas do Empório dos Animais?</label>
       <span class="sub">Estoque, cadastro de clientes, pedidos centralizados.</span>
       <div class="opcoes" data-radio="integracao">
         <label class="opcao"><input type="radio" name="integracao" value="Sim, tudo integrado em tempo real"><span class="marcador"></span><span class="texto">Sim, tudo integrado em tempo real</span></label>
@@ -21479,7 +21595,7 @@ table.dados input[type="text"] {
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">10.3</span> O estoque é centralizado ou descentralizado?</label>
+      <label class="titulo"><span class="num">10.3</span> O estoque do Empório dos Animais é centralizado ou descentralizado?</label>
       <div class="opcoes" data-radio="estoque">
         <label class="opcao"><input type="radio" name="estoque" value="Cada loja tem seu estoque próprio"><span class="marcador"></span><span class="texto">Cada loja tem seu estoque próprio</span></label>
         <label class="opcao"><input type="radio" name="estoque" value="Existe estoque central (CD) que abastece as lojas"><span class="marcador"></span><span class="texto">Existe estoque central (CD) que abastece as lojas</span></label>
@@ -21488,7 +21604,7 @@ table.dados input[type="text"] {
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">10.4</span> Existe equipe interna de TI? Quem dá suporte aos sistemas?</label>
+      <label class="titulo"><span class="num">10.4</span> O Empório dos Animais possui equipe interna de TI? Quem dá suporte aos sistemas?</label>
       <textarea data-campo="ti" rows="3"></textarea>
     </div>
 
@@ -21504,15 +21620,15 @@ table.dados input[type="text"] {
   </div>
 </div>
 
-<!-- ============ ETAPA 11: EXPECTATIVAS DO APP ============ -->
+<!-- ============ ETAPA 11: EXPECTATIVAS ============ -->
 <div class="etapa" data-etapa="11">
   <div class="etapa-card">
     <span class="etapa-numero">Etapa 11 de 12</span>
-    <h2>Expectativas para o app</h2>
+    <h2>Expectativas para o app do Empório dos Animais</h2>
     <p class="descricao">Quais funcionalidades você imagina como essenciais.</p>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">11.1</span> O app será para qual público?</label>
+      <label class="titulo"><span class="num">11.1</span> O app do Empório dos Animais será para qual público?</label>
       <div class="opcoes" data-multi="publico_app">
         <label class="opcao"><input type="checkbox" value="Cliente final (B2C) — para fazer pedidos"><span class="marcador"></span><span class="texto">Cliente final (B2C) — para fazer pedidos</span></label>
         <label class="opcao"><input type="checkbox" value="Operação interna — para controlar pedidos e entregas"><span class="marcador"></span><span class="texto">Operação interna — para controlar pedidos e entregas</span></label>
@@ -21522,7 +21638,7 @@ table.dados input[type="text"] {
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">11.2</span> Funcionalidades ESSENCIAIS no app de delivery:</label>
+      <label class="titulo"><span class="num">11.2</span> Funcionalidades ESSENCIAIS no app de delivery do Empório dos Animais:</label>
       <div class="opcoes" data-multi="funcionalidades">
         <label class="opcao"><input type="checkbox" value="Catálogo de produtos com fotos e preços"><span class="marcador"></span><span class="texto">Catálogo de produtos com fotos e preços</span></label>
         <label class="opcao"><input type="checkbox" value="Carrinho de compras"><span class="marcador"></span><span class="texto">Carrinho de compras</span></label>
@@ -21549,7 +21665,7 @@ table.dados input[type="text"] {
     </div>
 
     <div class="pergunta">
-      <label class="titulo"><span class="num">11.4</span> Quais funcionalidades você definitivamente NÃO quer no app?</label>
+      <label class="titulo"><span class="num">11.4</span> Quais funcionalidades você definitivamente NÃO quer no app do Empório dos Animais?</label>
       <textarea data-campo="nao_quer" rows="3"></textarea>
     </div>
   </div>
@@ -21559,38 +21675,34 @@ table.dados input[type="text"] {
   </div>
 </div>
 
-<!-- ============ ETAPA 12: REVISÃO E ENVIO ============ -->
+<!-- ============ ETAPA 12: REVISÃO ============ -->
 <div class="etapa" data-etapa="12">
   <div class="etapa-card">
     <span class="etapa-numero">Etapa 12 de 12 — Final</span>
     <h2>Revisão e envio</h2>
-    <p class="descricao">Confira um resumo das respostas e envie o material para o consultor.</p>
+    <p class="descricao">Confira um resumo das respostas do Empório dos Animais e envie o material para o consultor.</p>
 
     <div class="pergunta">
       <label class="titulo">Observações finais</label>
-      <span class="sub">Espaço livre para qualquer informação adicional que não foi coberta nas perguntas.</span>
+      <span class="sub">Espaço livre para qualquer informação adicional sobre o Empório dos Animais que não foi coberta nas perguntas.</span>
       <textarea data-campo="observacoes_finais" rows="5"></textarea>
     </div>
 
-    <div style="background: var(--creme); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border-left: 5px solid var(--amarelo);">
-      <h3 style="color: var(--marrom); margin-bottom: 0.8rem;">📋 Resumo do preenchimento</h3>
-      <div id="resumoPreenchimento" style="font-size: 0.95rem; color: var(--texto);"></div>
+    <div class="revisao-card">
+      <h4>Resumo do preenchimento</h4>
+      <div id="resumoPreenchimento" class="conteudo"></div>
     </div>
 
-    <div style="background: var(--coral-suave); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0;">
-      <h3 style="color: var(--marrom); margin-bottom: 0.8rem;">📤 Como funciona o envio</h3>
-      <ol style="padding-left: 1.5rem; line-height: 1.8;">
-        <li>Ao clicar em <strong>"Finalizar e enviar"</strong>, dois arquivos serão baixados: o formulário em Word e a planilha em Excel.</li>
-        <li>Em seguida, seu programa de e-mail abrirá com a mensagem já pronta para o consultor.</li>
-        <li>Você só precisa <strong>anexar os dois arquivos baixados</strong> ao e-mail e clicar em enviar.</li>
-      </ol>
+    <div class="bloco-personalizado">
+      <span class="selo-pequeno">Como funciona o envio</span>
+      <p style="font-size: 0.95rem;">Ao clicar em <strong>"Finalizar e enviar"</strong>, dois arquivos serão baixados — o formulário em Word e a planilha em Excel — e seu e-mail será aberto com a mensagem pronta para o consultor. Basta anexar os dois arquivos baixados e enviar.</p>
     </div>
 
-    <div class="aviso" id="avisoErroEnvio">⚠ Por favor, preencha ao menos os campos básicos (nome, e-mail, número de lojas) antes de enviar.</div>
+    <div class="aviso" id="avisoErroEnvio">Por favor, preencha ao menos os campos básicos (nome, e-mail, número de lojas) antes de enviar.</div>
   </div>
   <div class="navegacao">
     <button class="btn btn-secundario" onclick="etapaAnterior()">← Anterior</button>
-    <button class="btn btn-finalizar" onclick="finalizarEEnviar()">📤 Finalizar e enviar</button>
+    <button class="btn btn-finalizar" onclick="finalizarEEnviar()">Finalizar e enviar →</button>
   </div>
 </div>
 
@@ -21599,36 +21711,46 @@ table.dados input[type="text"] {
   <div class="etapa-card sucesso">
     <div class="icone">✓</div>
     <h2>Tudo pronto!</h2>
-    <p>Os arquivos foram baixados e seu e-mail está aberto. Basta anexar os dois arquivos e enviar. A partir daqui, inicio a análise do seu material para preparar o diagnóstico e a proposta da próxima reunião.</p>
+    <p>Os arquivos foram baixados e seu e-mail está aberto. Basta anexar os dois arquivos e enviar. A partir daqui, o consultor iniciará a análise do material do Empório dos Animais para preparar o diagnóstico e a proposta da próxima reunião.</p>
 
     <div class="botoes-acao">
       <button class="btn btn-primario" onclick="baixarNovamente()">↻ Baixar arquivos novamente</button>
       <button class="btn btn-secundario" onclick="abrirEmailNovamente()">✉ Abrir e-mail novamente</button>
-      <button class="btn btn-secundario" onclick="limparEReiniciar()" style="color: var(--dourado); border-color: var(--dourado);">🗑 Limpar tudo e recomeçar</button>
+      <button class="btn btn-secundario" onclick="limparEReiniciar()" style="color: var(--dourado); border-color: var(--dourado);">Limpar tudo e recomeçar</button>
     </div>
 
-    <div style="margin-top: 2rem; padding: 1.5rem; background: var(--creme); border-radius: 12px;">
+    <div style="margin-top: 2rem; padding: 1.75rem 2rem; background: var(--off-white); border-radius: 8px; border-left: 3px solid var(--dourado); text-align: left;">
       <h3 style="color: var(--verde-escuro); margin-bottom: 0.5rem; font-family: 'Playfair Display', Georgia, serif;">Próximos passos</h3>
-      <p style="font-size: 0.95rem; color: var(--texto); line-height: 1.6;">Após receber o material, analisarei suas respostas em profundidade e prepararei o diagnóstico inicial, o mapeamento de gaps e oportunidades, e a proposta da solução para a próxima reunião presencial.</p>
+      <p style="font-size: 0.95rem; color: var(--texto); line-height: 1.6; font-family: 'Inter', sans-serif;">Após receber o material do Empório dos Animais, o consultor analisará as respostas em profundidade, preparará o diagnóstico inicial, o mapeamento de gaps e oportunidades, e a proposta da solução para a próxima reunião presencial.</p>
     </div>
   </div>
 </div>
 
 </div>
 
+<!-- RODAPÉ DA MARCA -->
+<footer class="rodape-marca">
+  <div class="linha-rodape">
+    <strong>NEGRÃO</strong>
+    <span class="linha-dourada"></span>
+    <span>DIAGNÓSTICO &amp; SOLUÇÕES EMPRESARIAIS</span>
+  </div>
+  <div class="preparado-para">Preparado exclusivamente para Empório dos Animais</div>
+</footer>
+
 <script>
 // ============ ESTADO GLOBAL ============
-const TOTAL_ETAPAS = 13; // 0 (boas-vindas) a 12 (final)
+const TOTAL_ETAPAS = 13;
 let etapaAtual = 0;
 let dados = {};
 const EMAIL_CONSULTOR = 'rafaelmnegrao@gmail.com';
-const STORAGE_KEY = 'emporio_diagnostico_v1';
+const STORAGE_KEY = 'emporio_diagnostico_negrao_v2';
 
 const NOMES_ETAPAS = {
   0: 'Boas-vindas',
   1: 'Identificação',
   2: 'Visão estratégica',
-  3: 'Caracterização das lojas',
+  3: 'As lojas do Empório dos Animais',
   4: 'Processo atual',
   5: 'Faturamento do delivery',
   6: 'Custos do delivery',
@@ -21657,21 +21779,13 @@ const CUSTOS_LISTA = [
 
 // ============ INICIALIZAÇÃO ============
 window.addEventListener('DOMContentLoaded', () => {
-  try {
-    carregarDados();
-  } catch (e) {
-    console.error('Falha em carregarDados:', e);
-    dados = {};
+  carregarDados();
+  inicializarListeners();
+  atualizarUI();
+  construirCustos();
+  if (dados.qtd_lojas) {
+    atualizarQtdLojas(dados.qtd_lojas, true);
   }
-  try { inicializarListeners(); } catch (e) { console.error('Falha em inicializarListeners:', e); }
-  try { atualizarUI(); } catch (e) { console.error('Falha em atualizarUI:', e); }
-  try { construirCustos(); } catch (e) { console.error('Falha em construirCustos:', e); }
-  // Se já há qtd_lojas salva, recriar as estruturas
-  try {
-    if (dados.qtd_lojas) {
-      atualizarQtdLojas(dados.qtd_lojas, true);
-    }
-  } catch (e) { console.error('Falha em atualizarQtdLojas:', e); }
 });
 
 // ============ NAVEGAÇÃO ============
@@ -21698,24 +21812,19 @@ function irPara(etapa) {
 }
 
 function atualizarUI() {
-  // Esconder todas, mostrar a atual
   document.querySelectorAll('.etapa').forEach(el => el.classList.remove('ativa'));
   const ativa = document.querySelector(`[data-etapa="${etapaAtual}"]`);
   if (ativa) ativa.classList.add('ativa');
 
-  // Atualizar barra de progresso (etapa 0 não conta para %, etapa 12 = 100%)
   const progresso = etapaAtual === 0 ? 0 : (etapaAtual / 12) * 100;
   document.getElementById('progressoFill').style.width = progresso + '%';
   document.getElementById('etapaTexto').textContent = NOMES_ETAPAS[etapaAtual] || '';
   document.getElementById('etapaContador').textContent = etapaAtual === 0 || etapaAtual === 99 ? '' : `${etapaAtual} / 12`;
 
-  // Se for a etapa de revisão, montar o resumo
-  if (etapaAtual === 12) {
-    montarResumo();
-  }
+  if (etapaAtual === 12) montarResumo();
 }
 
-// ============ LISTENERS DE INPUT ============
+// ============ LISTENERS ============
 function inicializarListeners() {
   document.addEventListener('input', (e) => {
     if (e.target.matches('[data-campo]')) {
@@ -21723,7 +21832,6 @@ function inicializarListeners() {
       dados[campo] = e.target.value;
       salvarDados();
     }
-    // Tabelas de dados numéricos
     if (e.target.matches('[data-tabela]')) {
       const tabela = e.target.dataset.tabela;
       const linha = e.target.dataset.linha;
@@ -21732,6 +21840,7 @@ function inicializarListeners() {
       if (!dados[tabela][linha]) dados[tabela][linha] = {};
       dados[tabela][linha][coluna] = e.target.value;
       atualizarMedias(tabela);
+      atualizarTemposTotais();
       salvarDados();
     }
     if (e.target.matches('[data-custo]')) {
@@ -21744,7 +21853,6 @@ function inicializarListeners() {
     }
   });
 
-  // Checkboxes e radios
   document.addEventListener('change', (e) => {
     if (e.target.matches('.opcao input[type="checkbox"]')) {
       const grupo = e.target.closest('[data-multi]');
@@ -21754,7 +21862,7 @@ function inicializarListeners() {
         const selecionados = grupo.querySelectorAll('input[type="checkbox"]:checked');
         if (selecionados.length > max) {
           e.target.checked = false;
-          mostrarAvisoTemp(`Você pode selecionar no máximo ${max} opções`);
+          alert(`Você pode selecionar no máximo ${max} opções`);
           return;
         }
         dados[campo] = Array.from(selecionados).map(c => c.value);
@@ -21781,11 +21889,7 @@ function atualizarVisualOpcoes(grupo) {
   });
 }
 
-function mostrarAvisoTemp(msg) {
-  alert(msg);
-}
-
-// ============ QUANTIDADE DE LOJAS ============
+// ============ QTD LOJAS ============
 function atualizarQtdLojas(qtd, fromLoad = false) {
   qtd = parseInt(qtd);
   if (!qtd || qtd < 1 || qtd > 20) return;
@@ -21802,18 +21906,16 @@ function construirEspacosLojas(qtd) {
     const div = document.createElement('div');
     div.className = 'pergunta';
     div.innerHTML = `
-      <label class="titulo"><span class="num">3.${i}</span> Loja ${i}</label>
+      <label class="titulo"><span class="num">3.${i}</span> Loja ${i} do Empório dos Animais</label>
       <span class="sub">Localização, bairros que atende, tamanho aproximado e qualquer particularidade do delivery dessa loja.</span>
       <textarea data-campo="loja_${i}_descricao" rows="3"></textarea>
     `;
     container.appendChild(div);
   }
-  // Restaurar valores salvos
   for (let i = 1; i <= qtd; i++) {
     const el = container.querySelector(`[data-campo="loja_${i}_descricao"]`);
     if (el && dados[`loja_${i}_descricao`]) el.value = dados[`loja_${i}_descricao`];
   }
-  // Atualizar numeração das perguntas seguintes
   const nPad = document.getElementById('num_padronizacao');
   const nDest = document.getElementById('num_destaque');
   const nSobr = document.getElementById('num_sobreposicao');
@@ -21823,52 +21925,29 @@ function construirEspacosLojas(qtd) {
 }
 
 function construirTabelas(qtd) {
-  // Tabela faturamento bruto
   const tbFatBruto = document.getElementById('tabelaFatBruto');
   tbFatBruto.innerHTML = '';
-  for (let i = 1; i <= qtd; i++) {
-    const tr = criarLinhaFaturamento(i, 'fat_bruto');
-    tbFatBruto.appendChild(tr);
-  }
+  for (let i = 1; i <= qtd; i++) tbFatBruto.appendChild(criarLinhaFaturamento(i, 'fat_bruto'));
   tbFatBruto.appendChild(criarLinhaTotal('fat_bruto', qtd, 'TOTAL REDE'));
 
-  // Tabela faturamento delivery
   const tbFatDel = document.getElementById('tabelaFatDelivery');
   tbFatDel.innerHTML = '';
-  for (let i = 1; i <= qtd; i++) {
-    const tr = criarLinhaFaturamento(i, 'fat_delivery');
-    tbFatDel.appendChild(tr);
-  }
+  for (let i = 1; i <= qtd; i++) tbFatDel.appendChild(criarLinhaFaturamento(i, 'fat_delivery'));
   tbFatDel.appendChild(criarLinhaTotal('fat_delivery', qtd, 'TOTAL DELIVERY'));
 
-  // Tabela pedidos
   const tbPedidos = document.getElementById('tabelaPedidos');
   tbPedidos.innerHTML = '';
-  for (let i = 1; i <= qtd; i++) {
-    const tr = criarLinhaPedidos(i);
-    tbPedidos.appendChild(tr);
-  }
+  for (let i = 1; i <= qtd; i++) tbPedidos.appendChild(criarLinhaPedidos(i));
 
-  // Tabela tempo
   const tbTempo = document.getElementById('tabelaTempo');
   tbTempo.innerHTML = '';
-  for (let i = 1; i <= qtd; i++) {
-    const tr = criarLinhaTempo(i);
-    tbTempo.appendChild(tr);
-  }
+  for (let i = 1; i <= qtd; i++) tbTempo.appendChild(criarLinhaTempo(i));
 
-  // Tabela frota
   const tbFrota = document.getElementById('tabelaFrota');
   tbFrota.innerHTML = '';
-  for (let i = 1; i <= qtd; i++) {
-    const tr = criarLinhaFrota(i);
-    tbFrota.appendChild(tr);
-  }
+  for (let i = 1; i <= qtd; i++) tbFrota.appendChild(criarLinhaFrota(i));
 
-  // Restaurar valores das tabelas
   restaurarValoresTabelas();
-
-  // Atualizar médias após restaurar
   ['fat_bruto', 'fat_delivery'].forEach(t => atualizarMedias(t));
 }
 
@@ -21942,14 +22021,12 @@ function restaurarValoresTabelas() {
       });
     });
   });
-  // Atualizar tempos totais
   atualizarTemposTotais();
 }
 
 function atualizarMedias(tabela) {
   if (tabela !== 'fat_bruto' && tabela !== 'fat_delivery') return;
   const qtd = dados.qtd_lojas || 0;
-  // Médias por loja
   for (let i = 1; i <= qtd; i++) {
     const valores = [];
     for (let m = 1; m <= 6; m++) {
@@ -21960,16 +22037,12 @@ function atualizarMedias(tabela) {
     const cell = document.querySelector(`[data-media="${tabela}_${i}"]`);
     if (cell) cell.textContent = formatarMoeda(media);
   }
-  // Totais por mês
   for (let m = 1; m <= 6; m++) {
     let soma = 0;
-    for (let i = 1; i <= qtd; i++) {
-      soma += parseFloat(dados[tabela]?.[i]?.[`mes${m}`]) || 0;
-    }
+    for (let i = 1; i <= qtd; i++) soma += parseFloat(dados[tabela]?.[i]?.[`mes${m}`]) || 0;
     const cell = document.querySelector(`[data-total="${tabela}_mes${m}"]`);
     if (cell) cell.textContent = formatarMoeda(soma);
   }
-  // Total média
   let somaMedias = 0;
   for (let i = 1; i <= qtd; i++) {
     const valores = [];
@@ -22013,7 +22086,6 @@ function construirCustos() {
     `;
     grid.appendChild(div);
   });
-  // Restaurar
   if (dados.custos) {
     Object.entries(dados.custos).forEach(([idx, vals]) => {
       Object.entries(vals).forEach(([tipo, val]) => {
@@ -22029,65 +22101,42 @@ function salvarDados() {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(dados));
     mostrarSalvo();
-  } catch (e) {
-    console.error('Erro ao salvar:', e);
-  }
+  } catch (e) { console.error(e); }
 }
 
 function carregarDados() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) {
-      const parsed = JSON.parse(raw);
-      // Validação básica: precisa ser um objeto (não array, não null)
-      if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
-        throw new Error('Dados salvos inválidos');
-      }
-      dados = parsed;
-      // Restaurar campos
+      dados = JSON.parse(raw);
       Object.entries(dados).forEach(([campo, valor]) => {
-        try {
-          if (typeof valor === 'string' || typeof valor === 'number') {
-            const el = document.querySelector(`[data-campo="${campo}"]`);
-            if (el) el.value = valor;
-          }
-          if (Array.isArray(valor)) {
-            valor.forEach(v => {
-              if (typeof v !== 'string') return;
-              const checkbox = document.querySelector(`input[type="checkbox"][value="${v.replace(/"/g, '\"')}"]`);
-              if (checkbox) {
-                checkbox.checked = true;
-                const grupo = checkbox.closest('[data-multi]');
-                if (grupo) atualizarVisualOpcoes(grupo);
-              }
-            });
-          }
-        } catch (innerErr) {
-          console.warn('Falha ao restaurar campo ' + campo + ':', innerErr);
+        if (typeof valor === 'string' || typeof valor === 'number') {
+          const el = document.querySelector(`[data-campo="${campo}"]`);
+          if (el) el.value = valor;
         }
-      });
-      // Restaurar radios
-      ['orcamento','prazo','padronizacao','sobreposicao','registro','rota','tentativa_anterior','assinatura','integracao','estoque','frota_tipo'].forEach(name => {
-        try {
-          if (dados[name] && typeof dados[name] === 'string') {
-            const radio = document.querySelector(`input[type="radio"][name="${name}"][value="${dados[name].replace(/"/g, '\"')}"]`);
-            if (radio) {
-              radio.checked = true;
-              const grupo = radio.closest('[data-radio]');
+        if (Array.isArray(valor)) {
+          valor.forEach(v => {
+            const checkbox = document.querySelector(`input[type="checkbox"][value="${v.replace(/"/g, '\"')}"]`);
+            if (checkbox) {
+              checkbox.checked = true;
+              const grupo = checkbox.closest('[data-multi]');
               if (grupo) atualizarVisualOpcoes(grupo);
             }
+          });
+        }
+      });
+      ['orcamento','prazo','padronizacao','sobreposicao','registro','rota','tentativa_anterior','assinatura','integracao','estoque','frota_tipo'].forEach(name => {
+        if (dados[name]) {
+          const radio = document.querySelector(`input[type="radio"][name="${name}"][value="${dados[name].replace(/"/g, '\"')}"]`);
+          if (radio) {
+            radio.checked = true;
+            const grupo = radio.closest('[data-radio]');
+            if (grupo) atualizarVisualOpcoes(grupo);
           }
-        } catch (innerErr) {
-          console.warn('Falha ao restaurar radio ' + name + ':', innerErr);
         }
       });
     }
-  } catch (e) {
-    console.error('Erro ao carregar dados salvos. Limpando localStorage para recuperar:', e);
-    // Se os dados estão corrompidos, limpa e começa do zero — formulário continua funcionando
-    try { localStorage.removeItem(STORAGE_KEY); } catch (e2) {}
-    dados = {};
-  }
+  } catch (e) { console.error(e); }
 }
 
 let timerSalvo;
@@ -22103,55 +22152,44 @@ function montarResumo() {
   const div = document.getElementById('resumoPreenchimento');
   const items = [];
   if (dados.nome) items.push(`<strong>Respondente:</strong> ${dados.nome} (${dados.cargo || 'cargo não informado'})`);
-  if (dados.qtd_lojas) items.push(`<strong>Lojas:</strong> ${dados.qtd_lojas}`);
+  if (dados.qtd_lojas) items.push(`<strong>Lojas do Empório dos Animais:</strong> ${dados.qtd_lojas}`);
   if (dados.objetivo_projeto?.length) items.push(`<strong>Principais objetivos:</strong> ${dados.objetivo_projeto.join(' / ')}`);
   if (dados.prazo) items.push(`<strong>Prazo:</strong> ${dados.prazo}`);
-  if (dados.dor_principal) items.push(`<strong>Dor principal:</strong> ${dados.dor_principal.slice(0, 100)}${dados.dor_principal.length > 100 ? '...' : ''}`);
+  if (dados.dor_principal) items.push(`<strong>Dor principal:</strong> ${dados.dor_principal.slice(0, 120)}${dados.dor_principal.length > 120 ? '...' : ''}`);
 
   if (items.length === 0) {
-    div.innerHTML = '<p class="vazio" style="color: var(--marrom-claro);">Ainda não há respostas preenchidas.</p>';
+    div.innerHTML = '<p class="vazio">Ainda não há respostas preenchidas.</p>';
   } else {
     div.innerHTML = items.map(i => `<div style="padding: 0.4rem 0;">${i}</div>`).join('');
   }
 }
 
-// ============ FINALIZAR E ENVIAR ============
+// ============ FINALIZAR ============
 async function finalizarEEnviar() {
-  // Validação mínima
   if (!dados.nome || !dados.email || !dados.qtd_lojas) {
     document.getElementById('avisoErroEnvio').classList.add('mostrar');
     return;
   }
   document.getElementById('avisoErroEnvio').classList.remove('mostrar');
 
-  // Desabilitar botão para evitar duplo clique
   const btn = event?.target;
   if (btn) {
     btn.disabled = true;
-    btn.textContent = '⏳ Gerando arquivos...';
+    btn.textContent = 'Gerando arquivos...';
   }
 
   try {
-    // Gerar e baixar arquivos (Word primeiro, Excel depois)
     await gerarEBaixarWord();
     await new Promise(r => setTimeout(r, 1000));
     gerarEBaixarExcel();
     await new Promise(r => setTimeout(r, 1500));
-
-    // Ir para tela de sucesso ANTES de abrir e-mail
-    // (porque mailto: pode redirecionar e interromper o JS)
     irPara(99);
-
-    // Pequeno atraso antes do mailto para a UI atualizar
     await new Promise(r => setTimeout(r, 500));
     abrirEmail();
   } catch (e) {
-    console.error('Erro ao finalizar:', e);
+    console.error('Erro:', e);
     alert('Ocorreu um erro ao gerar os arquivos. Tente novamente ou contate o consultor.');
-    if (btn) {
-      btn.disabled = false;
-      btn.textContent = '📤 Finalizar e enviar';
-    }
+    if (btn) { btn.disabled = false; btn.textContent = 'Finalizar e enviar →'; }
   }
 }
 
@@ -22160,9 +22198,7 @@ function baixarNovamente() {
   setTimeout(() => gerarEBaixarExcel(), 500);
 }
 
-function abrirEmailNovamente() {
-  abrirEmail();
-}
+function abrirEmailNovamente() { abrirEmail(); }
 
 function limparEReiniciar() {
   if (confirm('Tem certeza que deseja apagar todas as respostas e recomeçar?')) {
@@ -22173,35 +22209,34 @@ function limparEReiniciar() {
 
 // ============ GERAÇÃO DE WORD ============
 async function gerarEBaixarWord() {
-  const { Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, AlignmentType, HeadingLevel, BorderStyle, WidthType, ShadingType, ImageRun } = docx;
+  const { Document, Packer, Paragraph, TextRun, AlignmentType, HeadingLevel, BorderStyle } = docx;
 
-  const COR_PRIMARIA = "503C28";
-  const COR_SECUNDARIA = "C84B3C";
-  const COR_CREME = "F5EBD7";
+  const COR_PRIMARIA = "1F3A2E";
+  const COR_DOURADO = "B8935A";
 
   const p = (texto, opts = {}) => new Paragraph({
-    children: [new TextRun({ text: texto || '(não respondido)', ...opts })],
+    children: [new TextRun({ text: texto || '(não respondido)', font: 'Calibri', ...opts })],
     spacing: { after: 120 }
   });
 
   const h1 = (texto) => new Paragraph({
     heading: HeadingLevel.HEADING_1,
-    children: [new TextRun({ text: texto, bold: true, size: 32, color: COR_PRIMARIA })],
+    children: [new TextRun({ text: texto, bold: true, size: 32, color: COR_PRIMARIA, font: 'Georgia' })],
     spacing: { before: 360, after: 240 },
-    border: { bottom: { style: BorderStyle.SINGLE, size: 12, color: COR_SECUNDARIA, space: 4 } },
+    border: { bottom: { style: BorderStyle.SINGLE, size: 8, color: COR_DOURADO, space: 4 } },
     pageBreakBefore: true
   });
 
   const h2 = (texto) => new Paragraph({
     heading: HeadingLevel.HEADING_2,
-    children: [new TextRun({ text: texto, bold: true, size: 26, color: COR_SECUNDARIA })],
+    children: [new TextRun({ text: texto, bold: true, size: 26, color: COR_PRIMARIA, font: 'Georgia' })],
     spacing: { before: 280, after: 160 }
   });
 
   const labelVal = (label, valor) => new Paragraph({
     children: [
-      new TextRun({ text: `${label}: `, bold: true, color: COR_PRIMARIA }),
-      new TextRun({ text: valor || '(não respondido)', color: '3D2E1F' })
+      new TextRun({ text: `${label}: `, bold: true, color: COR_PRIMARIA, font: 'Calibri' }),
+      new TextRun({ text: valor || '(não respondido)', font: 'Calibri' })
     ],
     spacing: { after: 120 }
   });
@@ -22210,8 +22245,8 @@ async function gerarEBaixarWord() {
     if (!lista || !lista.length) return labelVal(label, '');
     return new Paragraph({
       children: [
-        new TextRun({ text: `${label}: `, bold: true, color: COR_PRIMARIA }),
-        new TextRun({ text: lista.join(' • '), color: '3D2E1F' })
+        new TextRun({ text: `${label}: `, bold: true, color: COR_PRIMARIA, font: 'Calibri' }),
+        new TextRun({ text: lista.join(' • '), font: 'Calibri' })
       ],
       spacing: { after: 120 }
     });
@@ -22219,65 +22254,80 @@ async function gerarEBaixarWord() {
 
   const filhos = [];
 
-  // Capa
+  // Capa institucional
   filhos.push(new Paragraph({
-    children: [new TextRun({ text: 'EMPÓRIO DOS ANIMAIS', bold: true, size: 48, color: COR_PRIMARIA })],
+    children: [new TextRun({ text: 'NEGRÃO', bold: true, size: 56, color: COR_PRIMARIA, font: 'Georgia', characterSpacing: 60 })],
     alignment: AlignmentType.CENTER,
-    spacing: { before: 2400, after: 200 }
+    spacing: { before: 2400, after: 100 }
   }));
   filhos.push(new Paragraph({
-    children: [new TextRun({ text: 'Diagnóstico do Delivery', size: 32, color: COR_SECUNDARIA, bold: true })],
+    children: [new TextRun({ text: 'DIAGNÓSTICO & SOLUÇÕES EMPRESARIAIS', size: 18, color: COR_DOURADO, characterSpacing: 80, font: 'Calibri' })],
     alignment: AlignmentType.CENTER,
-    spacing: { after: 400 }
+    spacing: { after: 600 }
   }));
   filhos.push(new Paragraph({
-    children: [new TextRun({ text: `Respondente: ${dados.nome || '-'}`, size: 24, color: COR_PRIMARIA })],
+    children: [new TextRun({ text: '— Briefing exclusivo —', italics: true, size: 22, color: '5C5C5C', font: 'Georgia' })],
     alignment: AlignmentType.CENTER,
-    spacing: { after: 100 }
+    spacing: { after: 200 }
   }));
   filhos.push(new Paragraph({
-    children: [new TextRun({ text: `Cargo: ${dados.cargo || '-'}`, size: 22, color: '8B7355' })],
+    children: [new TextRun({ text: 'Diagnóstico do Delivery', size: 40, color: COR_PRIMARIA, bold: true, font: 'Georgia' })],
     alignment: AlignmentType.CENTER,
-    spacing: { after: 100 }
+    spacing: { after: 200 }
   }));
   filhos.push(new Paragraph({
-    children: [new TextRun({ text: `Data: ${new Date().toLocaleDateString('pt-BR')}`, size: 22, color: '8B7355' })],
+    children: [new TextRun({ text: 'EMPÓRIO DOS ANIMAIS', bold: true, size: 32, color: COR_PRIMARIA, font: 'Georgia', characterSpacing: 40 })],
+    alignment: AlignmentType.CENTER,
+    spacing: { after: 600 }
+  }));
+  filhos.push(new Paragraph({
+    children: [new TextRun({ text: `Respondente: ${dados.nome || '-'}`, size: 22, color: COR_PRIMARIA, font: 'Calibri' })],
+    alignment: AlignmentType.CENTER,
+    spacing: { after: 80 }
+  }));
+  filhos.push(new Paragraph({
+    children: [new TextRun({ text: `${dados.cargo || ''}`, size: 20, color: '5C5C5C', italics: true, font: 'Calibri' })],
+    alignment: AlignmentType.CENTER,
+    spacing: { after: 200 }
+  }));
+  filhos.push(new Paragraph({
+    children: [new TextRun({ text: `${new Date().toLocaleDateString('pt-BR')}`, size: 18, color: '5C5C5C', font: 'Calibri' })],
     alignment: AlignmentType.CENTER
   }));
 
   // Identificação
   filhos.push(h1('1. Identificação'));
   filhos.push(labelVal('Nome', dados.nome));
-  filhos.push(labelVal('Cargo', dados.cargo));
+  filhos.push(labelVal('Cargo no Empório dos Animais', dados.cargo));
   filhos.push(labelVal('E-mail', dados.email));
   filhos.push(labelVal('WhatsApp', dados.whatsapp));
-  filhos.push(labelVal('Tempo de mercado', dados.tempo_mercado));
-  filhos.push(labelVal('Quantidade de lojas', dados.qtd_lojas?.toString()));
+  filhos.push(labelVal('Tempo de mercado do Empório dos Animais', dados.tempo_mercado));
+  filhos.push(labelVal('Quantidade de lojas do Empório dos Animais', dados.qtd_lojas?.toString()));
 
   // Visão estratégica
   filhos.push(h1('2. Visão estratégica do delivery'));
-  filhos.push(h2('Por que investir em delivery agora'));
+  filhos.push(h2('Por que o Empório dos Animais decidiu investir em delivery agora'));
   filhos.push(p(dados.motivo_investir));
   filhos.push(h2('Visão de 24 meses'));
   filhos.push(p(dados.visao_24_meses));
   filhos.push(labelMulti('Objetivos do projeto', dados.objetivo_projeto));
   if (dados.objetivo_outro) filhos.push(labelVal('Outro objetivo', dados.objetivo_outro));
-  filhos.push(h2('Concorrentes'));
+  filhos.push(h2('Concorrentes do Empório dos Animais'));
   filhos.push(p(dados.concorrentes));
   filhos.push(labelVal('Orçamento previsto', dados.orcamento));
   if (dados.orcamento_valor) filhos.push(labelVal('Faixa de valor', dados.orcamento_valor));
   filhos.push(labelVal('Prazo desejado', dados.prazo));
-  filhos.push(h2('Tomadores de decisão'));
+  filhos.push(h2('Tomadores de decisão no Empório dos Animais'));
   filhos.push(p(dados.decisores));
 
   // Lojas
-  filhos.push(h1('3. Caracterização das lojas'));
+  filhos.push(h1('3. As lojas do Empório dos Animais'));
   const qtd = parseInt(dados.qtd_lojas) || 0;
   for (let i = 1; i <= qtd; i++) {
-    filhos.push(h2(`Loja ${i}`));
+    filhos.push(h2(`Loja ${i} do Empório dos Animais`));
     filhos.push(p(dados[`loja_${i}_descricao`]));
   }
-  filhos.push(labelVal('Padronização', dados.padronizacao));
+  filhos.push(labelVal('Padronização entre as lojas', dados.padronizacao));
   filhos.push(h2('Loja com melhor desempenho'));
   filhos.push(p(dados.loja_destaque));
   filhos.push(labelVal('Sobreposição de área', dados.sobreposicao));
@@ -22287,9 +22337,9 @@ async function gerarEBaixarWord() {
   filhos.push(h1('4. Processo atual do delivery'));
   filhos.push(labelMulti('Canais de entrada do pedido', dados.canais));
   if (dados.canais_outro) filhos.push(labelVal('Outros canais', dados.canais_outro));
-  filhos.push(h2('Canais top'));
+  filhos.push(h2('Canais com maior volume e ticket'));
   filhos.push(p(dados.canais_top));
-  filhos.push(labelMulti('Quem recebe e registra', dados.quem_recebe));
+  filhos.push(labelMulti('Quem recebe e registra o pedido', dados.quem_recebe));
   filhos.push(p(dados.quem_recebe_obs));
   filhos.push(labelVal('Forma de registro', dados.registro));
   filhos.push(h2('Separação no estoque'));
@@ -22297,22 +22347,18 @@ async function gerarEBaixarWord() {
   filhos.push(labelVal('Roteirização', dados.rota));
   filhos.push(labelMulti('Acompanhamento pelo cliente', dados.acompanhamento));
   filhos.push(labelMulti('Forma de pagamento', dados.pagamento));
-  filhos.push(h2('Pós-venda'));
+  filhos.push(h2('Pós-venda no Empório dos Animais'));
   filhos.push(p(dados.pos_venda));
 
   // Dores
-  filhos.push(h1('5. Dores e desejos'));
-  filhos.push(h2('Dor principal a resolver'));
+  filhos.push(h1('5. Dores e desejos do delivery'));
+  filhos.push(h2('Dor principal a resolver no Empório dos Animais'));
   filhos.push(p(dados.dor_principal));
   filhos.push(h2('5 maiores dores'));
-  [1,2,3,4,5].forEach(n => {
-    if (dados[`dor_${n}`]) filhos.push(labelVal(`Dor ${n}`, dados[`dor_${n}`]));
-  });
-  filhos.push(h2('Reclamações mais frequentes'));
-  [1,2,3].forEach(n => {
-    if (dados[`reclamacao_${n}`]) filhos.push(labelVal(`Reclamação ${n}`, dados[`reclamacao_${n}`]));
-  });
-  filhos.push(h2('Onde está perdendo dinheiro'));
+  [1,2,3,4,5].forEach(n => { if (dados[`dor_${n}`]) filhos.push(labelVal(`Dor ${n}`, dados[`dor_${n}`])); });
+  filhos.push(h2('Reclamações mais frequentes dos clientes'));
+  [1,2,3].forEach(n => { if (dados[`reclamacao_${n}`]) filhos.push(labelVal(`Reclamação ${n}`, dados[`reclamacao_${n}`])); });
+  filhos.push(h2('Onde o Empório dos Animais está perdendo dinheiro'));
   filhos.push(p(dados.perda_dinheiro));
   filhos.push(h2('Funcionalidades sonhadas'));
   filhos.push(p(dados.sonho));
@@ -22320,11 +22366,9 @@ async function gerarEBaixarWord() {
   filhos.push(p(dados.tentativa_obs));
 
   // Produtos
-  filhos.push(h1('6. Produtos no delivery'));
-  filhos.push(h2('Top 5 produtos do delivery'));
-  [1,2,3,4,5].forEach(n => {
-    if (dados[`produto_${n}`]) filhos.push(labelVal(`Produto ${n}`, dados[`produto_${n}`]));
-  });
+  filhos.push(h1('6. Produtos no delivery do Empório dos Animais'));
+  filhos.push(h2('Top 5 produtos'));
+  [1,2,3,4,5].forEach(n => { if (dados[`produto_${n}`]) filhos.push(labelVal(`Produto ${n}`, dados[`produto_${n}`])); });
   filhos.push(labelMulti('Categorias no delivery', dados.categorias));
   filhos.push(labelVal('Programa de assinatura/recompra', dados.assinatura));
   filhos.push(h2('Regulamentações específicas'));
@@ -22340,8 +22384,8 @@ async function gerarEBaixarWord() {
   filhos.push(h2('Histórico de dados'));
   filhos.push(p(dados.historico_dados));
 
-  // Expectativas do app
-  filhos.push(h1('8. Expectativas para o app'));
+  // Expectativas
+  filhos.push(h1('8. Expectativas para o app do Empório dos Animais'));
   filhos.push(labelMulti('Público do app', dados.publico_app));
   filhos.push(labelMulti('Funcionalidades essenciais', dados.funcionalidades));
   filhos.push(h2('Referência de app que admira'));
@@ -22354,29 +22398,25 @@ async function gerarEBaixarWord() {
   filhos.push(labelVal('Tipo de frota', dados.frota_tipo));
   filhos.push(labelMulti('Tipo de veículo', dados.veiculo_tipo));
 
-  // Observações finais
+  // Observações
   filhos.push(h1('10. Observações finais'));
   filhos.push(p(dados.observacoes_finais));
 
   const doc = new Document({
     creator: 'Negrão Consultoria',
-    title: 'Diagnóstico Empresarial',
+    title: 'Diagnóstico do Delivery — Empório dos Animais',
+    description: 'Briefing exclusivo do delivery, preparado pela Negrão Consultoria para o Empório dos Animais',
     styles: {
-      default: { document: { run: { font: 'Arial', size: 22, color: '2B2B2B' } } }
+      default: { document: { run: { font: 'Calibri', size: 22, color: '2B2B2B' } } }
     },
     sections: [{
-      properties: {
-        page: {
-          size: { width: 11906, height: 16838 },
-          margin: { top: 1440, right: 1440, bottom: 1440, left: 1440 }
-        }
-      },
+      properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 1440, right: 1440, bottom: 1440, left: 1440 } } },
       children: filhos
     }]
   });
 
   const blob = await Packer.toBlob(doc);
-  saveAs(blob, `Diagnostico_Delivery_Emporio_${formatarNomeArquivo(dados.nome)}.docx`);
+  saveAs(blob, `Diagnostico_Delivery_Emporio_dos_Animais_${formatarNomeArquivo(dados.nome)}.docx`);
 }
 
 // ============ GERAÇÃO DE EXCEL ============
@@ -22384,20 +22424,23 @@ function gerarEBaixarExcel() {
   const wb = XLSX.utils.book_new();
   const qtd = parseInt(dados.qtd_lojas) || 0;
 
-  // Aba 1: Resumo
+  // Aba Resumo
   const resumo = [
-    ['EMPÓRIO DOS ANIMAIS — DADOS OPERACIONAIS DO DELIVERY'],
+    ['NEGRÃO — DIAGNÓSTICO & SOLUÇÕES EMPRESARIAIS'],
+    [''],
+    ['Cliente', 'EMPÓRIO DOS ANIMAIS'],
+    ['Documento', 'Dados operacionais do delivery'],
     [''],
     ['Respondente', dados.nome || ''],
-    ['Cargo', dados.cargo || ''],
+    ['Cargo no Empório dos Animais', dados.cargo || ''],
+    ['E-mail', dados.email || ''],
     ['Data', new Date().toLocaleDateString('pt-BR')],
-    ['Quantidade de lojas', dados.qtd_lojas || '']
+    ['Quantidade de lojas do Empório dos Animais', dados.qtd_lojas || '']
   ];
-  const wsResumo = XLSX.utils.aoa_to_sheet(resumo);
-  XLSX.utils.book_append_sheet(wb, wsResumo, 'Resumo');
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(resumo), 'Resumo');
 
-  // Aba 2: Faturamento bruto
-  const fatBruto = [['Loja', 'Mês 1', 'Mês 2', 'Mês 3', 'Mês 4', 'Mês 5', 'Mês 6', 'Média']];
+  // Faturamento Bruto
+  const fatBruto = [['Loja do Empório dos Animais', 'Mês 1', 'Mês 2', 'Mês 3', 'Mês 4', 'Mês 5', 'Mês 6', 'Média']];
   let somaMediaBruto = 0;
   for (let i = 1; i <= qtd; i++) {
     const linha = [`Loja ${i}`];
@@ -22412,7 +22455,6 @@ function gerarEBaixarExcel() {
     somaMediaBruto += media;
     fatBruto.push(linha);
   }
-  // Linha total
   const totalBruto = ['TOTAL REDE'];
   for (let m = 1; m <= 6; m++) {
     let s = 0;
@@ -22421,11 +22463,10 @@ function gerarEBaixarExcel() {
   }
   totalBruto.push(somaMediaBruto);
   fatBruto.push(totalBruto);
-  const wsFatBruto = XLSX.utils.aoa_to_sheet(fatBruto);
-  XLSX.utils.book_append_sheet(wb, wsFatBruto, 'Faturamento Bruto');
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(fatBruto), 'Faturamento Bruto');
 
-  // Aba 3: Faturamento Delivery
-  const fatDel = [['Loja', 'Mês 1', 'Mês 2', 'Mês 3', 'Mês 4', 'Mês 5', 'Mês 6', 'Média']];
+  // Faturamento Delivery
+  const fatDel = [['Loja do Empório dos Animais', 'Mês 1', 'Mês 2', 'Mês 3', 'Mês 4', 'Mês 5', 'Mês 6', 'Média']];
   let somaMediaDel = 0;
   for (let i = 1; i <= qtd; i++) {
     const linha = [`Loja ${i}`];
@@ -22448,46 +22489,29 @@ function gerarEBaixarExcel() {
   }
   totalDel.push(somaMediaDel);
   fatDel.push(totalDel);
-  const wsFatDel = XLSX.utils.aoa_to_sheet(fatDel);
-  XLSX.utils.book_append_sheet(wb, wsFatDel, 'Faturamento Delivery');
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(fatDel), 'Faturamento Delivery');
 
-  // Aba 4: Pedidos
-  const pedidos = [['Loja', 'Pedidos/dia (média)', 'Pedidos/dia (pico)', 'Pedidos/dia (vale)', 'Pedidos/mês (estimativa)', 'Ticket médio (R$)', '% erro', '% no prazo']];
+  // Pedidos
+  const pedidos = [['Loja do Empório dos Animais', 'Pedidos/dia (média)', 'Pedidos/dia (pico)', 'Pedidos/dia (vale)', 'Pedidos/mês (estimativa)', 'Ticket médio (R$)', '% erro', '% no prazo']];
   for (let i = 1; i <= qtd; i++) {
     const d = dados.pedidos?.[i] || {};
     const dia = parseFloat(d.dia_media) || 0;
-    pedidos.push([
-      `Loja ${i}`,
-      dia,
-      parseFloat(d.dia_pico) || 0,
-      parseFloat(d.dia_vale) || 0,
-      dia * 30,
-      parseFloat(d.ticket_medio) || 0,
-      (parseFloat(d.pct_erro) || 0) / 100,
-      (parseFloat(d.pct_prazo) || 0) / 100
-    ]);
+    pedidos.push([`Loja ${i}`, dia, parseFloat(d.dia_pico) || 0, parseFloat(d.dia_vale) || 0, dia * 30, parseFloat(d.ticket_medio) || 0, (parseFloat(d.pct_erro) || 0) / 100, (parseFloat(d.pct_prazo) || 0) / 100]);
   }
-  const wsPedidos = XLSX.utils.aoa_to_sheet(pedidos);
-  XLSX.utils.book_append_sheet(wb, wsPedidos, 'Pedidos');
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(pedidos), 'Pedidos');
 
-  // Aba 5: Tempo
-  const tempo = [['Loja', 'Tempo despacho (min)', 'Tempo rota (min)', 'Tempo total (min)', 'Tempo prometido (min)', 'Distância (km)']];
+  // Tempo
+  const tempo = [['Loja do Empório dos Animais', 'Tempo despacho (min)', 'Tempo rota (min)', 'Tempo total (min)', 'Tempo prometido (min)', 'Distância (km)']];
   for (let i = 1; i <= qtd; i++) {
     const d = dados.tempo?.[i] || {};
     const desp = parseFloat(d.t_despacho) || 0;
     const rota = parseFloat(d.t_rota) || 0;
-    tempo.push([
-      `Loja ${i}`,
-      desp, rota, desp + rota,
-      parseFloat(d.t_prometido) || 0,
-      parseFloat(d.dist_km) || 0
-    ]);
+    tempo.push([`Loja ${i}`, desp, rota, desp + rota, parseFloat(d.t_prometido) || 0, parseFloat(d.dist_km) || 0]);
   }
-  const wsTempo = XLSX.utils.aoa_to_sheet(tempo);
-  XLSX.utils.book_append_sheet(wb, wsTempo, 'Tempo de Entrega');
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(tempo), 'Tempo de Entrega');
 
-  // Aba 6: Custos
-  const custos = [['Categoria', 'Item', 'Valor mensal (R$)', 'Observações']];
+  // Custos
+  const custos = [['Categoria', 'Item de custo do delivery', 'Valor mensal (R$)', 'Observações']];
   let totalCustos = 0;
   CUSTOS_LISTA.forEach((c, idx) => {
     const v = parseFloat(dados.custos?.[idx]?.valor) || 0;
@@ -22495,37 +22519,28 @@ function gerarEBaixarExcel() {
     custos.push([c.cat, c.item, v, dados.custos?.[idx]?.obs || '']);
   });
   custos.push(['TOTAL', '', totalCustos, '']);
-  const wsCustos = XLSX.utils.aoa_to_sheet(custos);
-  XLSX.utils.book_append_sheet(wb, wsCustos, 'Custos');
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(custos), 'Custos');
 
-  // Aba 7: Frota
-  const frota = [['Loja', 'Próprios', 'Terceirizados', 'Total', 'Veículos', 'Entregas/entregador/dia', 'Custo médio por entrega (R$)']];
+  // Frota
+  const frota = [['Loja do Empório dos Animais', 'Próprios', 'Terceirizados', 'Total', 'Veículos', 'Entregas/entregador/dia', 'Custo médio por entrega (R$)']];
   for (let i = 1; i <= qtd; i++) {
     const d = dados.frota?.[i] || {};
     const prop = parseInt(d.proprios) || 0;
     const terc = parseInt(d.terceirizados) || 0;
-    frota.push([
-      `Loja ${i}`, prop, terc, prop + terc,
-      parseInt(d.veiculos) || 0,
-      parseFloat(d.entregas_dia) || 0,
-      parseFloat(d.custo_entrega) || 0
-    ]);
+    frota.push([`Loja ${i}`, prop, terc, prop + terc, parseInt(d.veiculos) || 0, parseFloat(d.entregas_dia) || 0, parseFloat(d.custo_entrega) || 0]);
   }
-  const wsFrota = XLSX.utils.aoa_to_sheet(frota);
-  XLSX.utils.book_append_sheet(wb, wsFrota, 'Frota');
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(frota), 'Frota');
 
-  // Aba 8: Indicadores consolidados
+  // Indicadores
   const totalFatDel = somaMediaDel;
   const totalFatBruto = somaMediaBruto;
   const pctDel = totalFatBruto > 0 ? totalFatDel / totalFatBruto : 0;
   let totalPedMes = 0;
-  for (let i = 1; i <= qtd; i++) {
-    totalPedMes += (parseFloat(dados.pedidos?.[i]?.dia_media) || 0) * 30;
-  }
+  for (let i = 1; i <= qtd; i++) totalPedMes += (parseFloat(dados.pedidos?.[i]?.dia_media) || 0) * 30;
   const custoEntrega = totalPedMes > 0 ? totalCustos / totalPedMes : 0;
 
   const indicadores = [
-    ['INDICADORES CONSOLIDADOS'],
+    ['INDICADORES CONSOLIDADOS — EMPÓRIO DOS ANIMAIS'],
     [''],
     ['DESEMPENHO COMERCIAL', ''],
     ['Faturamento médio mensal da rede', totalFatBruto],
@@ -22540,10 +22555,9 @@ function gerarEBaixarExcel() {
     ['Custo por entrega (calculado)', custoEntrega],
     ['Margem bruta estimada do delivery', totalFatDel - totalCustos]
   ];
-  const wsInd = XLSX.utils.aoa_to_sheet(indicadores);
-  XLSX.utils.book_append_sheet(wb, wsInd, 'Indicadores');
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(indicadores), 'Indicadores');
 
-  XLSX.writeFile(wb, `Dados_Operacionais_${formatarNomeArquivo(dados.nome)}.xlsx`);
+  XLSX.writeFile(wb, `Dados_Operacionais_Emporio_dos_Animais_${formatarNomeArquivo(dados.nome)}.xlsx`);
 }
 
 function formatarNomeArquivo(nome) {
@@ -22551,39 +22565,33 @@ function formatarNomeArquivo(nome) {
   return nome.replace(/[^a-zA-Z0-9]/g, '_').slice(0, 30);
 }
 
-// ============ ABERTURA DE E-MAIL ============
+// ============ EMAIL ============
 function abrirEmail() {
-  const assunto = `Diagnóstico do Delivery — Negrão Consultoria — ${dados.nome || 'preenchimento'}`;
+  const assunto = `Diagnóstico do Delivery — Empório dos Animais — ${dados.nome || 'preenchimento'}`;
   const corpo =
 `Olá Rafael,
 
-Segue em anexo o formulário de diagnóstico preenchido para a consultoria.
+Segue em anexo o briefing de diagnóstico do delivery do Empório dos Animais, preparado pela Negrão Consultoria.
 
 Estão anexados dois arquivos:
-- Diagnostico_Delivery_${formatarNomeArquivo(dados.nome)}.docx (formulário completo)
-- Dados_Operacionais_${formatarNomeArquivo(dados.nome)}.xlsx (dados numéricos)
+- Diagnostico_Delivery_Emporio_dos_Animais_${formatarNomeArquivo(dados.nome)}.docx (briefing completo)
+- Dados_Operacionais_Emporio_dos_Animais_${formatarNomeArquivo(dados.nome)}.xlsx (dados numéricos do delivery)
 
 Dados do respondente:
 Nome: ${dados.nome || '-'}
-Cargo: ${dados.cargo || '-'}
+Cargo no Empório dos Animais: ${dados.cargo || '-'}
 WhatsApp: ${dados.whatsapp || '-'}
 Quantidade de lojas: ${dados.qtd_lojas || '-'}
 
-Aguardo seu retorno para darmos os próximos passos.
+Aguardo seu retorno para agendarmos a reunião presencial.
 
-${dados.nome || ''}`;
+${dados.nome || ''}
+Empório dos Animais`;
 
   const link = `mailto:${EMAIL_CONSULTOR}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
   window.location.href = link;
 }
 </script>
-
-
-<footer class="rodape-marca">
-  <strong>NEGRÃO</strong>
-  <span class="linha-dourada"></span>
-  <span>DIAGNÓSTICO &amp; SOLUÇÕES EMPRESARIAIS</span>
-</footer>
 
 </body>
 </html>
