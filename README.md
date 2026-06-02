@@ -1,59 +1,54 @@
-# Formulário Diagnóstico do Delivery — Empório dos Animais
+# Diagnóstico — Favoretto Vidigal Advogados Associados
 
-Aplicação web que entrega o formulário de diagnóstico do delivery do Empório dos Animais, preparado pela Negrão Consultoria.
+Formulário web de **Diagnóstico de Gestão e Tecnologia Jurídica**, preparado pela
+**Negrão · Diagnóstico & Soluções Empresariais** para o escritório Favoretto Vidigal.
 
-## Estrutura
+O formulário é um único HTML estático (em `public/index.html`). Este projeto sobe um
+servidor Node.js mínimo (Express) para o Railway servir essa página.
 
-```
-.
-├── public/
-│   └── index.html        ← O formulário (1.1 MB, autocontido)
-├── server.js             ← Servidor Express (serve o HTML estático)
-├── package.json          ← Dependências (apenas Express)
-├── railway.json          ← Configuração do Railway
-├── .gitignore
-└── README.md
-```
+---
 
-## Como subir no Railway
+## Como publicar (GitHub + Railway)
 
-### Opção 1 — Via GitHub (recomendado)
+1. **Crie um repositório no GitHub** (ex.: `diagnostico-favoretto-vidigal`).
+2. Suba **todos os arquivos desta pasta** mantendo a estrutura:
+   ```
+   ├── public/
+   │   └── index.html
+   ├── server.js
+   ├── package.json
+   ├── railway.json
+   └── .gitignore
+   ```
+3. No **Railway** → *New Project* → *Deploy from GitHub repo* → selecione o repositório.
+4. O Railway detecta o Node.js automaticamente e roda `npm start`.
+5. Em *Settings → Networking → Generate Domain*, gere a URL pública.
+6. Pronto — envie o link ao cliente por e-mail ou WhatsApp.
 
-1. **Suba esta pasta para um repositório no GitHub** (público ou privado).
-2. Entre em [railway.app](https://railway.app) e faça login.
-3. Clique em **"New Project"** → **"Deploy from GitHub repo"**.
-4. Autorize o Railway no GitHub (se for a primeira vez) e selecione o repositório.
-5. O Railway detecta automaticamente que é Node.js, instala as dependências e roda `npm start`.
-6. Em ~1-2 minutos a aplicação está no ar.
-7. Para gerar o link público: vá em **Settings** → **Networking** → **Generate Domain**.
+> Para atualizar o formulário depois, basta dar `git push` — o Railway redeploia sozinho.
 
-### Opção 2 — Via Railway CLI
+---
 
-```bash
-npm install -g @railway/cli
-railway login
-railway init
-railway up
-```
-
-## Como atualizar o formulário
-
-1. Substitua o arquivo `public/index.html` pela nova versão.
-2. Commit + push para o GitHub.
-3. O Railway redeploya automaticamente em ~1 minuto.
-
-## Rodar localmente (teste)
+## Testar localmente (opcional)
 
 ```bash
 npm install
 npm start
+# abra http://localhost:3000
 ```
 
-Acesse http://localhost:3000
+Ou simplesmente abra `public/index.html` direto no navegador (duplo clique) — funciona
+sem servidor, só não terá URL pública.
 
-## Notas técnicas
+---
 
-- O HTML é totalmente autocontido (bibliotecas Word/Excel embutidas via base64).
-- Não há banco de dados — as respostas são salvas no navegador do usuário (localStorage).
-- Ao finalizar, o usuário baixa Word + Excel e envia por e-mail manualmente.
-- A porta é definida pela variável de ambiente `PORT` (Railway define automaticamente).
+## O que o formulário faz
+
+- 11 etapas de diagnóstico cobrindo carteira de clientes, processos, ferramentas,
+  fluxos, indicadores, captação, financeiro, equipe, dores/objetivos e expectativas.
+- **Salva automaticamente** as respostas no dispositivo (localStorage) — o cliente pode
+  parar e retomar.
+- Ao concluir, o cliente pode **baixar uma planilha (Excel)**, um **resumo (Word)** ou
+  **enviar por e-mail** para `rafaelmnegrao@gmail.com`.
+- Identidade visual Negrão (verde-escuro, dourado, Playfair Display + Inter) com a marca
+  do Favoretto Vidigal aplicada no topo, na abertura e no rodapé.

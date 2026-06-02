@@ -1,7 +1,7 @@
 {
-  "name": "formulario-emporio-dos-animais",
+  "name": "diagnostico-favoretto-vidigal",
   "version": "1.0.0",
-  "description": "Diagnóstico do Delivery — Empório dos Animais — Negrão Consultoria",
+  "description": "Diagnóstico de Gestão e Tecnologia Jurídica — Favoretto Vidigal — Negrão Diagnóstico & Soluções Empresariais",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
