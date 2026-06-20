@@ -1,5 +1,5 @@
 /* ============================================================
-   Briefing online · Consultório Dra. Francielle Delgado
+   Briefing online · Produção · Assessoria em Licitações
    Wizard mobile-first com salvamento automático.
    ============================================================ */
 
@@ -20,7 +20,7 @@ const EMAIL_RAFAEL = CLIENT.email || "";
   } catch (e) {}
 })();
 
-const STORAGE_KEY = "briefing_francielle_v1";
+const STORAGE_KEY = "briefing_producao_v1";
 
 /* Conteúdo e helper qid: ver questions.js (window.BRIEFING / window.qid) */
 
@@ -121,7 +121,7 @@ function renderWelcome() {
   const hasProgress = saved && saved.respostas && Object.keys(saved.respostas).length > 0;
   const s = el(`
     <section class="stage welcome">
-      <img class="emblem" src="assets/emblema.png" alt="Emblema do Consultório Dra. Francielle Delgado" />
+      <img class="emblem" src="assets/emblema.png" alt="Emblema Produção" />
       <p class="kicker">${esc(CLIENT.kicker || "Briefing de diagnóstico")}</p>
       <h1>${esc(CLIENT.nome || "Cliente")}</h1>
       <p class="sub-serif">${esc(CLIENT.subtitulo || "Vamos conhecer o seu negócio de perto.")}</p>
@@ -268,7 +268,7 @@ function renderRevisao() {
   // Identificação
   const idItems = BRIEFING.identificacao.fields
     .map(f => ({ q: f.label, a: state.identificacao[f.id] || "" }));
-  review.appendChild(reviewGroup("Sobre a clínica", idItems, () => { state.step = CONTENT_FIRST; render(); }));
+  review.appendChild(reviewGroup("Sobre a empresa", idItems, () => { state.step = CONTENT_FIRST; render(); }));
 
   // Blocos
   BRIEFING.blocos.forEach((b, bi) => {
@@ -381,7 +381,7 @@ function buildPdf() {
     .filter(x => x.v);
   if (idFields.length) {
     doc.setFont("times", "bold"); doc.setFontSize(12); doc.setTextColor(GREEN[0], GREEN[1], GREEN[2]);
-    ensure(8); doc.text("Sobre a clinica", M, y); y += 6;
+    ensure(8); doc.text("Sobre a empresa", M, y); y += 6;
     doc.setFontSize(9.8);
     idFields.forEach(x => {
       ensure(6);
